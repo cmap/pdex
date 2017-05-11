@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://clue.io/public/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="//fonts.googleapis.com/css?family=Istok+Web:400,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700|Roboto+Condensed:400,300,700|Roboto+Slab:100,300,400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet" type="text/css">
+	<link href="https://clue.io/public/css/dist/clue.all.min.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/dist/clue.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/lib/gridstack.min.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/lib/gridstack-extra.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/local/command.css" rel="stylesheet">
+	<link href="https://clue.io/public/scss/local/elements/_typography.scss" rel="stylesheet">
+</head>
+
+<body>
+<header>
+	<div style="margin:0" class="row">
+		<div id="header-bar" style="padding-left:0;padding-right:0;" class="col-xs-12 header-dark">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<!--Used in app header-->
+				<div id="main-header-bar" style="display: flex;" class="flex">
+					<a href="/"><img src="https://clue.io/public/img/logos/banner-logo.svg" style="padding-right:5px;"></a>
+					<span id="header-app-location" style="" class="clue_app hidden-xs">
+						<span id="header-clue-app" style="">CLUE APP&nbsp;</span>
+						<span id="header-app-title" style="cursor: pointer;" class="app_name" data-app-title="PDEx">PDEx</span>
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="container-fluid">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+
+	<div class="row">
+		<div class="col-sm-offset-1 col-md-offset-2 col-xs-12 col-sm-10 col-md-8">
+			<div class="max-wide-962 margin-h-auto">
+				<div class="page-title">About PDEx</div>
+				<p class="intro"> Compare patient-derived gene expression profiles with perturbational signatures in the <a href="https://clue.io">Connectivity Map (CMap) </a> </p>
+				<p>PDEx tests for associations between a feature present in a subset of samples (gene mutation, tumor receptor status, patient drug response, etc) and perturbations profiled in CMap (drug treatments, gene knock-down, gene overexpression). A high positive PDEx score indicates samples with the feature of interest and the perturbation induced similar gene expression changes. A high negative score indicates opposite changes - genes upregulated in one are downregulated in the other. Intermediate scores indicate no detectable association between the two </p>
+				<h3><a href="overview.html">Examine associations with common alterations in The Cancer Genome Atlas (TCGA)</a></h3>
+				<hr>
+				<div class="home-example">
+					<h2>Example: TP53 mutations in TCGA</h2>
+					<p>Tumor Protein 53 (TP53) is a tumor suppressor gene that is frequently inactivated by somatic missense mutation in cancer. TP53 mutations occur in 1931 out of 10147 TCGA samples (19%) across different cancers. How does TP53 mutation in TCGA compare to TP53 knock-down in CMap?</p>
+					<a href="cmap_gene.html?g=TP53" target="_blank">Examine other assoications.</a>
+				</div>
+				<hr>
+				<div class="home-example">
+					<h2>Example: Connections to KEAP1 and NRF2 (NFE2L2) signalling</h2>
+					<p>KEAP1 functions to keep NRF2 in the cytoplasm and regulates the antioxidant response signalling of NRF2. Upon inactivation of KEAP1 by mutations, we expect to see a signature similar to NRF2 overexpression. This is true for KEAP1 mutations, NRF2 mutations, and NRF2 copy number gains!</p>
+					<a href="cmap_gene.html?g=KEAP1&g=NFE2L2" target="_blank">Examine other assoications.</a>
+				</div>	
+				<hr>
+				<div class="home-list">
+					<h2>Links and features to come</h2>
+					<li><a href="http://www.bsiranosian.com/wp-content/uploads/2016/04/CMap_TCGA_poster.pdf">Learn more about PDEx</a></li>
+					<li>Test your own set of TCGA samples with PDEx (soon)</li>
+					<li>Use PDex on a custom ste of expression data (soon)</li>
+					<li>Download data associated with this project (soon)</li>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+
+</div>
+
+	
+</body>
+</html>
+

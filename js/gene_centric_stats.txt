@@ -1,0 +1,501 @@
+pr_id	pr_gene_id	pr_gene_symbol	pr_gene_title	pr_is_lm	pr_is_bing	tcga_id	cna_gain	cna_gain_deep	cna_loss	cna_loss_deep	mutations	outliers_positive	outliers_negative
+207593_at	64137	ABCG4	ATP binding cassette subfamily G member 4	0	1	ABCG4|64137	1041	60	2572	92	59	64	0
+219433_at	54880	BCOR	BCL6 corepressor	0	1	BCOR|54880	1203	52	1929	84	144	0	71
+208368_s_at	675	BRCA2	breast cancer 2	0	1	BRCA2|675	1329	93	2962	116	205	0	70
+206607_at	867	CBL	Cbl proto-oncogene, E3 ubiquitin protein ligase	0	1	CBL|867	1038	60	2633	99	61	0	61
+204258_at	1105	CHD1	chromodomain helicase DNA binding protein 1	0	1	CHD1|1105	1128	52	2630	116	93	0	80
+206070_s_at	2042	EPHA3	EPH receptor A3	1	1	EPHA3|2042	1373	87	2124	68	172	92	0
+216836_s_at	2064	ERBB2	erb-b2 receptor tyrosine kinase 2	1	1	ERBB2|2064	2149	384	1364	0	117	135	57
+214053_at	2066	ERBB4	erb-b2 receptor tyrosine kinase 4	0	1	ERBB4|2066	1271	68	1600	124	223	243	0
+204667_at	3169	FOXA1	forkhead box A1	0	1	FOXA1|3169	1392	151	1780	0	69	122	61
+210515_at	6927	HNF1A	HNF1 homeobox A	0	0	HNF1A|6927	1449	55	1230	0	65	113	62
+212196_at	3572	IL6ST	interleukin 6 signal transducer	0	1	IL6ST|3572	1173	50	2306	113	73	0	179
+209984_at	23081	KDM4C	lysine (K)-specific demethylase 4C	0	1	KDM4C|23081	1185	149	3057	148	73	0	51
+203992_s_at	7403	KDM6A	lysine (K)-specific demethylase 6A	0	1	KDM6A|7403	1234	81	1944	143	130	0	72
+219813_at	9113	LATS1	large tumor suppressor kinase 1	0	1	LATS1|9113	955	50	2531	77	80	0	76
+219643_at	53353	LRP1B	LDL receptor related protein 1B	0	1	LRP1B|53353	1304	67	1771	466	628	129	0
+209014_at	9500	MAGED1	MAGE family member D1	0	1	MAGED1|9500	1276	72	1788	67	63	0	57
+212678_at	4763	NF1	neurofibromin 1	0	1	NF1|4763	1796	108	1697	94	294	0	78
+214607_at	5063	PAK3	p21 protein (Cdc42/Rac)-activated kinase 3	0	1	PAK3|5063	1406	54	1569	50	62	175	0
+208305_at	5241	PGR	progesterone receptor	0	0	PGR|5241	1223	141	2282	89	93	60	0
+214043_at	5789	PTPRD	protein tyrosine phosphatase, receptor type D	0	1	PTPRD|5789	1207	178	3411	464	253	0	55
+208984_x_at	8241	RBM10	RNA binding motif protein 10	0	1	RBM10|8241	1274	105	1761	62	89	0	68
+207569_at	6098	ROS1	ROS proto-oncogene 1 , receptor tyrosine kinase	0	0	ROS1|6098	979	52	2624	127	209	232	0
+204292_x_at	6794	STK11	serine/threonine kinase 11	0	1	STK11|6794	1116	59	2589	95	69	0	58
+202778_s_at	7750	ZMYM2	zinc finger, MYM-type 2	1	1	ZMYM2|7750	1309	83	2796	78	83	0	59
+219995_s_at	79755	ZNF750	zinc finger protein 750	0	1	ZNF750|79755	2431	217	1181	0	61	64	89
+201334_s_at	23365	ARHGEF12	Rho guanine nucleotide exchange factor 12	1	1	ARHGEF12|23365	1023	56	2581	106	98	0	54
+202076_at	329	BIRC2	baculoviral IAP repeat containing 2	1	1	BIRC2|329	1236	168	2179	72	0	66	57
+218362_s_at	22894	DIS3	DIS3 homolog, exosome endoribonuclease and 3'-5' exoribonuclease	0	1	DIS3|22894	1454	99	2803	120	68	0	63
+201244_s_at	5894	RAF1	Raf-1 proto-oncogene, serine/threonine kinase	0	1	RAF1|5894	1145	123	2595	72	50	62	0
+209227_at	7991	TUSC3	tumor suppressor candidate 3	0	1	TUSC3|7991	1352	0	3665	402	61	61	133
+203844_at	7428	VHL	von Hippel-Lindau tumor suppressor, E3 ubiquitin protein ligase	0	1	VHL|7428	1174	112	2678	84	222	0	118
+202123_s_at	25	ABL1	ABL proto-oncogene 1, non-receptor tyrosine kinase	1	1	ABL1|25	1266	65	2362	0	76	0	79
+211207_s_at	23305	ACSL6	acyl-CoA synthetase long-chain family member 6	0	1	ACSL6|23305	1273	116	2417	57	62	0	0
+65718_at	25960	ADGRA2	adhesion G protein-coupled receptor A2	0	1	GPR124|25960	2336	396	2346	140	71	0	0
+206105_at	2334	AFF2	AF4/FMR2 family member 2	0	0	AFF2|2334	1653	149	1547	71	183	0	0
+219199_at	27125	AFF4	AF4/FMR2 family member 4	0	1	AFF4|27125	1292	119	2428	55	81	0	0
+212992_at	113146	AHNAK2	AHNAK nucleoprotein 2	0	1	AHNAK2|113146	1394	103	2293	52	424	0	0
+NA	NA	AK9	NA	NA	NA	NA	977	62	2538	140	113	0	0
+203809_s_at	208	AKT2	v-akt murine thymoma viral oncogene homolog 2	0	0	AKT2|208	1866	217	1392	0	50	69	0
+208212_s_at	238	ALK	anaplastic lymphoma receptor tyrosine kinase	0	0	ALK|238	1862	83	750	0	149	115	0
+207381_at	242	ALOX12B	arachidonate 12-lipoxygenase, 12R type	0	0	ALOX12B|242	784	0	3703	90	61	139	0
+219437_s_at	29123	ANKRD11	ankyrin repeat domain 11	0	1	ANKRD11|29123	1321	0	2923	145	159	0	67
+203525_s_at	324	APC	adenomatous polyposis coli	0	1	APC|324	1222	94	2593	119	362	0	0
+201895_at	369	ARAF	A-Raf proto-oncogene, serine/threonine kinase	0	1	ARAF|369	1270	97	1784	60	51	0	0
+209517_s_at	9070	ASH2L	ash2 (absent, small, or homeotic)-like (Drosophila)	0	1	ASH2L|9070	2326	413	2246	132	0	60	0
+218659_at	55252	ASXL2	additional sex combs like 2, transcriptional regulator	0	1	ASXL2|55252	1836	75	782	0	115	0	118
+212672_at	472	ATM	ATM serine/threonine kinase	0	1	ATM|472	1042	62	2616	116	253	0	0
+212849_at	8312	AXIN1	axin 1	1	1	AXIN1|8312	2017	108	1628	51	63	0	0
+201419_at	8314	BAP1	BRCA1 associated protein 1	0	1	BAP1|8314	841	0	3146	140	138	0	61
+210347_s_at	53335	BCL11A	B-cell CLL/lymphoma 11A	0	1	BCL11A|53335	1740	107	604	0	111	0	97
+219528_s_at	64919	BCL11B	B-cell CLL/lymphoma 11B	0	1	BCL11B|64919	1286	57	2339	55	76	0	0
+202102_s_at	23476	BRD4	bromodomain containing 4	0	1	BRD4|23476	1607	187	1582	0	81	0	59
+213268_at	23261	CAMTA1	calmodulin binding transcription activator 1	0	0	CAMTA1|23261	1036	81	2611	101	139	0	0
+220247_at	57082	CASC5	cancer susceptibility candidate 5	0	1	CASC5|57082	769	0	2601	88	105	0	68
+213373_s_at	841	CASP8	caspase 8	0	1	CASP8|841	1342	73	1155	0	116	0	57
+220638_s_at	23624	CBLC	Cbl proto-oncogene C, E3 ubiquitin protein ligase	0	1	CBLC|23624	1642	154	1546	0	0	207	108
+218578_at	79577	CDC73	cell division cycle 73	0	1	CDC73|79577	3491	329	575	0	60	0	56
+201131_s_at	999	CDH1	cadherin 1	0	1	CDH1|999	1336	0	2625	92	191	0	129
+204831_at	1024	CDK8	cyclin-dependent kinase 8	0	1	CDK8|1024	1324	92	2711	51	0	0	198
+207039_at	1029	CDKN2A	cyclin-dependent kinase inhibitor 2A	1	1	CDKN2A|1029	905	0	3719	1190	216	0	64
+203461_at	1106	CHD2	chromodomain helicase DNA binding protein 2	0	0	CHD2|1106	1410	158	1872	0	125	0	70
+37892_at	1301	COL11A1	collagen type XI alpha 1	0	0	COL11A1|1301	1101	0	2163	50	306	67	0
+204920_at	1373	CPS1	carbamoyl-phosphate synthase 1	0	0	CPS1|1373	1235	0	1415	57	175	114	0
+202160_at	1387	CREBBP	CREB binding protein	0	1	CREBBP|1387	1934	106	1522	56	226	0	0
+NA	NA	CRIPAK	NA	NA	NA	NA	941	99	2398	59	92	0	0
+200764_s_at	1495	CTNNA1	catenin alpha 1	0	1	CTNNA1|1495	1352	124	2194	0	69	0	68
+204977_at	1662	DDX10	DEAD-box helicase 10	1	1	DDX10|1662	1034	57	2608	115	55	0	0
+204909_at	1656	DDX6	DEAD-box helicase 6	0	1	DDX6|1656	1042	74	2539	90	0	0	56
+206619_at	27121	DKK4	dickkopf WNT signaling pathway inhibitor 4	0	0	DKK4|27121	2622	340	1780	106	0	119	0
+203881_s_at	1756	DMD	dystrophin	0	1	DMD|1756	1230	89	2219	338	381	0	0
+213160_at	1794	DOCK2	dedicator of cytokinesis 2	0	1	DOCK2|1794	1465	154	2066	51	209	0	0
+214865_at	84444	DOT1L	DOT1-like histone H3K79 methyltransferase	0	0	DOT1L|84444	1128	62	2540	75	85	0	0
+NA	NA	ECT2L	NA	NA	NA	NA	1048	81	2438	69	63	0	0
+201984_s_at	1956	EGFR	epidermal growth factor receptor	1	1	EGFR|1956	3529	364	463	0	206	74	0
+210827_s_at	1999	ELF3	E74-like factor 3 (ets domain transcription factor, epithelial-specific )	0	1	ELF3|1999	3556	355	534	0	60	0	66
+219012_s_at	56946	EMSY	EMSY, BRCA2-interacting transcriptional repressor	0	1	C11orf30|56946	1529	239	1618	0	73	0	56
+213579_s_at	2033	EP300	E1A binding protein p300	0	1	EP300|2033	1157	53	2519	0	186	0	105
+203499_at	1969	EPHA2	EPH receptor A2	0	1	EPHA2|1969	989	60	2428	51	103	0	0
+215664_s_at	2044	EPHA5	EPH receptor A5	0	1	EPHA5|2044	797	65	2251	0	162	322	0
+206852_at	2045	EPHA7	EPH receptor A7	0	0	EPHA7|2045	931	0	2530	152	120	150	0
+202894_at	2050	EPHB4	EPH receptor B4	0	1	EPHB4|2050	3324	204	668	0	66	0	51
+217886_at	2060	EPS15	epidermal growth factor receptor pathway substrate 15	0	1	EPS15|2060	1165	73	1846	0	52	0	63
+202454_s_at	2065	ERBB3	erb-b2 receptor tyrosine kinase 3	1	1	ERBB3|2065	1956	121	939	0	145	0	125
+205225_at	2099	ESR1	estrogen receptor 1	0	1	ESR1|2099	1020	98	2517	92	61	0	0
+206501_x_at	2115	ETV1	ets variant 1	1	1	ETV1|2115	3552	167	664	0	59	67	0
+203358_s_at	2146	EZH2	enhancer of zeste 2 polycomb repressive complex 2 subunit	1	1	EZH2|2146	3013	141	1053	53	70	0	0
+218080_x_at	11124	FAF1	Fas associated factor 1	0	1	FAF1|11124	1141	73	1931	50	57	0	0
+NA	NA	FANCD2	NA	NA	NA	NA	1126	113	2662	90	91	0	0
+201579_at	2195	FAT1	FAT atypical cadherin 1	1	1	FAT1|2195	614	0	3115	257	349	0	58
+NA	NA	FAT3	NA	NA	NA	NA	1245	98	2178	60	468	0	0
+211535_s_at	2260	FGFR1	fibroblast growth factor receptor 1	0	1	FGFR1|2260	2393	438	2214	129	57	0	0
+203639_s_at	2263	FGFR2	fibroblast growth factor receptor 2	1	1	FGFR2|2263	897	81	2554	0	117	0	89
+204379_s_at	2261	FGFR3	fibroblast growth factor receptor 3	0	1	FGFR3|2261	983	132	2462	52	61	0	0
+204579_at	2264	FGFR4	fibroblast growth factor receptor 4	1	1	FGFR4|2264	1579	189	2144	0	66	0	53
+222033_s_at	2321	FLT1	fms related tyrosine kinase 1	0	1	FLT1|2321	1359	100	2761	53	136	0	0
+206674_at	2322	FLT3	fms related tyrosine kinase 3	0	1	FLT3|2322	1334	105	2752	60	145	0	0
+NA	NA	FOXP1	NA	NA	NA	NA	941	58	2953	172	70	0	0
+214093_s_at	8880	FUBP1	far upstream element (FUSE) binding protein 1	0	1	FUBP1|8880	1057	64	1988	0	71	0	161
+210446_at	2623	GATA1	GATA binding protein 1 (globin transcription factor 1)	0	0	GATA1|2623	1283	93	1782	59	0	115	0
+202615_at	2776	GNAQ	guanine nucleotide binding protein (G protein), q polypeptide	0	1	GNAQ|2776	1106	0	2267	50	74	0	61
+218241_at	9950	GOLGA5	golgin A5	0	1	GOLGA5|9950	1260	54	2333	0	52	0	62
+205814_at	2913	GRM3	glutamate receptor, metabotropic 3	0	1	GRM3|2913	3299	147	640	0	155	170	0
+205425_at	3092	HIP1	huntingtin interacting protein 1	0	1	HIP1|3092	3198	97	634	0	86	0	83
+NA	NA	HOOK3	NA	NA	NA	NA	2689	309	1714	99	52	0	0
+211968_s_at	3320	HSP90AA1	heat shock protein 90kDa alpha family class A member 1	0	1	HSP90AA1|3320	1316	70	2308	57	66	0	0
+209341_s_at	3551	IKBKB	inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase beta	1	1	IKBKB|3551	2662	354	1810	107	57	0	0
+215776_at	3645	INSRR	insulin receptor-related receptor	0	0	INSRR|3645	3660	428	373	0	121	230	0
+201648_at	3716	JAK1	Janus kinase 1	0	1	JAK1|3716	1133	74	2007	0	78	0	55
+205842_s_at	3717	JAK2	Janus kinase 2	0	1	JAK2|3717	1217	158	3097	139	93	0	0
+202423_at	7994	KAT6A	K(lysine) acetyltransferase 6A	1	1	MYST3|7994	2629	371	1802	109	131	0	0
+202383_at	8242	KDM5C	lysine (K)-specific demethylase 5C	0	1	KDM5C|8242	1298	78	1749	62	112	0	0
+212080_at	4297	KMT2A	lysine (K)-specific methyltransferase 2A	0	1	MLL|4297	1081	81	2598	97	219	0	0
+NA	NA	KMT2C	NA	NA	NA	NA	3070	142	1171	94	487	0	0
+214352_s_at	3845	KRAS	Kirsten rat sarcoma viral oncogene homolog	0	1	KRAS|3845	2429	292	909	0	447	76	0
+NA	NA	LATS2	NA	NA	NA	NA	1304	76	2870	74	69	0	0
+202822_at	4026	LPP	LIM domain containing preferred translocation partner in lipoma	0	1	LPP|4026	3088	681	804	57	56	0	0
+206609_at	9947	MAGEC1	MAGE family member C1	0	0	MAGEC1|9947	957	62	983	0	234	270	0
+203266_s_at	6416	MAP2K4	mitogen-activated protein kinase kinase 4	0	1	MAP2K4|6416	760	0	3491	142	82	0	66
+212945_s_at	23269	MGA	MGA, MAX dimerization protein	0	1	MGA|23269	779	0	2615	94	198	0	58
+202520_s_at	4292	MLH1	mutL homolog 1	0	1	MLH1|4292	975	0	2812	88	60	0	118
+205408_at	8028	MLLT10	myeloid/lymphoid or mixed-lineage leukemia; translocated to, 10	0	1	MLLT10|8028	1400	91	1900	0	67	0	79
+204917_s_at	4300	MLLT3	myeloid/lymphoid or mixed-lineage leukemia; translocated to, 3	0	1	MLLT3|4300	1053	80	3238	219	0	0	96
+214939_x_at	4301	MLLT4	myeloid/lymphoid or mixed-lineage leukemia; translocated to, 4	0	1	MLLT4|4301	983	58	2625	123	118	0	0
+214614_at	3110	MNX1	motor neuron and pancreas homeobox 1	0	1	MNX1|3110	2625	139	1049	50	0	173	0
+205395_s_at	4361	MRE11A	MRE11 homolog A, double strand break repair nuclease	0	1	MRE11A|4361	1194	87	2142	62	0	0	65
+204956_at	4507	MTAP	methylthioadenosine phosphorylase	0	1	MTAP|4507	925	53	3569	974	0	0	266
+202288_at	2475	MTOR	mechanistic target of rapamycin (serine/threonine kinase)	0	1	MTOR|2475	1011	65	2589	55	192	0	0
+217109_at	4585	MUC4	mucin 4, cell surface associated	0	0	MUC4|4585	843	121	268	0	340	67	0
+204798_at	4602	MYB	v-myb avian myeloblastosis viral oncogene homolog	0	1	MYB|4602	1063	91	2341	57	50	0	0
+212867_at	10499	NCOA2	nuclear receptor coactivator 2	0	1	NCOA2|10499	3916	394	595	0	97	0	193
+200857_s_at	9611	NCOR1	nuclear receptor corepressor 1	0	1	NCOR1|9611	899	67	3504	92	190	0	0
+208759_at	23385	NCSTN	nicastrin	0	1	NCSTN|23385	3749	468	364	0	55	0	56
+33767_at	4744	NEFH	neurofilament, heavy polypeptide	0	1	NEFH|4744	1314	77	2493	0	127	137	0
+NA	NA	NEGR1	NA	NA	NA	NA	1118	73	2140	85	51	0	0
+219084_at	64324	NSD1	nuclear receptor binding SET domain protein 1	0	1	NSD1|64324	1606	195	2146	51	181	0	0
+200747_s_at	4926	NUMA1	nuclear mitotic apparatus protein 1	0	1	NUMA1|4926	1577	236	1543	0	112	0	54
+213990_s_at	57144	PAK7	p21 protein (Cdc42/Rac)-activated kinase 7	0	1	PAK7|57144	2999	97	894	0	126	250	0
+207058_s_at	5071	PARK2	parkin RBR E3 ubiquitin protein ligase	0	1	PARK2|5071	938	60	2953	281	68	0	0
+202239_at	143	PARP4	poly(ADP-ribose) polymerase family member 4	0	1	PARP4|143	1327	83	2758	60	111	0	0
+204742_s_at	23047	PDS5B	PDS5 cohesin associated factor B	0	1	PDS5B|23047	1292	90	2800	100	90	0	0
+215129_at	5288	PIK3C2G	phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 gamma	0	1	PIK3C2G|5288	2265	181	1123	0	142	227	0
+204297_at	5289	PIK3C3	phosphatidylinositol 3-kinase catalytic subunit type 3	1	1	PIK3C3|5289	931	61	3105	77	65	0	0
+204369_at	5290	PIK3CA	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha	1	1	PIK3CA|5290	3176	755	630	0	825	0	55
+203879_at	5293	PIK3CD	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta	0	1	PIK3CD|5293	1012	65	2434	64	62	0	0
+213677_s_at	5378	PMS1	PMS1 homolog 1, mismatch repair system component	0	1	PMS1|5378	1422	97	962	0	61	0	56
+217192_s_at	639	PRDM1	PR domain 1	0	1	PRDM1|639	988	83	2502	135	78	0	0
+220928_s_at	63976	PRDM16	PR domain 16	0	0	PRDM16|63976	1084	84	2605	96	114	0	0
+205277_at	7799	PRDM2	PR domain 2	0	1	PRDM2|7799	975	61	2591	56	124	0	0
+207709_at	5563	PRKAA2	protein kinase AMP-activated catalytic subunit alpha 2	0	1	PRKAA2|5563	1119	86	1752	0	70	0	73
+212610_at	5781	PTPN11	protein tyrosine phosphatase, non-receptor type 11	0	1	PTPN11|5781	1515	61	1169	0	56	0	80
+210823_s_at	5802	PTPRS	protein tyrosine phosphatase, receptor type S	0	0	PTPRS|5802	1225	73	2296	0	118	0	51
+205948_at	11122	PTPRT	protein tyrosine phosphatase, receptor type T	0	1	PTPRT|11122	3634	223	412	0	270	55	0
+209349_at	10111	RAD50	RAD50 double strand break repair protein	0	1	RAD50|10111	1271	114	2320	53	64	0	0
+219661_at	64901	RANBP17	RAN binding protein 17	0	1	RANBP17|64901	1499	167	2197	0	73	0	167
+202677_at	5921	RASA1	RAS p21 protein activator 1	1	1	RASA1|5921	1030	0	2580	104	104	0	123
+203132_at	5925	RB1	retinoblastoma 1	1	1	RB1|5925	1150	0	3351	401	199	0	148
+218704_at	54894	RNF43	ring finger protein 43	0	1	RNF43|54894	2382	229	1149	0	124	0	122
+208768_x_at	6146	RPL22	ribosomal protein L22	0	1	RPL22|6146	1030	72	2592	81	63	0	0
+209360_s_at	861	RUNX1	runt related transcription factor 1	0	1	RUNX1|861	1278	76	1983	80	73	0	0
+205933_at	26040	SETBP1	SET binding protein 1	0	1	SETBP1|26040	922	73	3130	86	162	0	0
+212493_s_at	29072	SETD2	SET domain containing 2	0	1	SETD2|29072	866	0	3229	124	223	0	105
+201071_x_at	23451	SF3B1	splicing factor 3b subunit 1	0	1	SF3B1|23451	1421	82	994	0	140	0	81
+202527_s_at	4089	SMAD4	SMAD family member 4	0	1	SMAD4|4089	822	0	3355	229	127	0	72
+203874_s_at	6594	SMARCA1	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 1	0	1	SMARCA1|6594	1362	64	1502	0	83	0	67
+213720_s_at	6597	SMARCA4	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4	1	1	SMARCA4|6597	1550	174	1848	0	177	0	70
+201589_at	8243	SMC1A	structural maintenance of chromosomes 1A	1	1	SMC1A|8243	1312	77	1719	58	85	0	0
+218629_at	6608	SMO	smoothened, frizzled class receptor	0	1	SMO|6608	2971	125	909	0	53	0	83
+201997_s_at	23013	SPEN	spen family transcriptional repressor	1	1	SPEN|23013	997	69	2564	0	242	0	60
+206626_x_at	6756	SSX1	synovial sarcoma, X breakpoint 1	0	0	SSX1|6756	1270	99	1756	64	0	101	0
+209023_s_at	10735	STAG2	stromal antigen 2	0	1	STAG2|10735	1487	79	1564	0	141	0	85
+201331_s_at	6778	STAT6	signal transducer and activator of transcription 6, interleukin-4 induced	0	1	STAT6|6778	1839	95	946	0	59	0	70
+212287_at	23512	SUZ12	SUZ12 polycomb repressive complex 2 subunit	1	1	SUZ12|23512	1729	90	1550	0	53	0	69
+209447_at	23345	SYNE1	spectrin repeat containing, nuclear envelope 1	0	1	SYNE1|23345	1009	68	2596	77	564	0	0
+219682_s_at	6926	TBX3	T-box 3	0	1	TBX3|6926	1474	55	1255	0	80	63	0
+208986_at	6938	TCF12	transcription factor 12	0	1	TCF12|6938	889	0	2331	69	59	0	79
+219840_s_at	27004	TCL6	T-cell leukemia/lymphoma 6 (non-protein coding)	0	0	TCL6|27004	1231	56	2312	54	0	175	0
+206702_at	7010	TEK	TEK receptor tyrosine kinase	0	1	TEK|7010	1096	65	3074	156	112	0	0
+207199_at	7015	TERT	telomerase reverse transcriptase	1	1	TERT|7015	3134	546	801	0	50	320	0
+206649_s_at	7030	TFE3	transcription factor binding to IGHM enhancer 3	0	1	TFE3|7030	1280	94	1739	60	54	0	0
+207334_s_at	7048	TGFBR2	transforming growth factor beta receptor II	1	1	TGFBR2|7048	1007	56	2824	111	78	0	0
+211689_s_at	7113	TMPRSS2	transmembrane protease, serine 2	0	1	TMPRSS2|7113	1290	60	2221	110	0	78	0
+208901_s_at	7150	TOP1	topoisomerase (DNA) I	0	1	TOP1|7150	3454	168	382	0	60	0	119
+201746_at	7157	TP53	tumor protein p53	1	1	TP53|7157	759	0	3793	162	1931	0	201
+201731_s_at	7175	TPR	translocated promoter region, nuclear basket protein	0	1	TPR|7175	3606	334	520	0	168	0	61
+202642_s_at	8295	TRRAP	transformation/transcription domain-associated protein	0	1	TRRAP|8295	3383	232	630	0	230	0	66
+NA	NA	WDR90	NA	NA	NA	NA	2046	114	1628	59	87	0	0
+209054_s_at	7468	WHSC1	Wolf-Hirschhorn syndrome candidate 1	0	1	WHSC1|7468	957	120	2491	55	94	0	0
+221248_s_at	54904	WHSC1L1	Wolf-Hirschhorn syndrome candidate 1-like 1	0	1	WHSC1L1|54904	2385	449	2207	128	82	0	0
+210861_s_at	8838	WISP3	WNT1 inducible signaling pathway protein 3	0	0	WISP3|8838	964	59	2528	133	0	79	0
+205667_at	7486	WRN	Werner syndrome, RecQ helicase-like	0	1	WRN|7486	1490	51	3383	283	99	0	0
+206067_s_at	7490	WT1	Wilms tumor 1	0	1	WT1|7490	1109	92	1714	0	61	216	0
+208775_at	7514	XPO1	exportin 1	0	1	XPO1|7514	1862	109	596	0	64	0	66
+207402_at	7691	ZNF132	zinc finger protein 132	0	1	ZNF132|7691	1737	115	1674	50	54	0	0
+203739_at	7764	ZNF217	zinc finger protein 217	0	1	ZNF217|7764	3650	362	280	0	79	0	89
+219228_at	55422	ZNF331	zinc finger protein 331	0	1	ZNF331|55422	1722	96	1597	0	58	0	73
+206059_at	7644	ZNF91	zinc finger protein 91	0	0	ZNF91|7644	1566	93	1475	0	118	0	70
+207664_at	2515	ADAM2	ADAM metallopeptidase domain 2	0	0	ADAM2|2515	1068	156	870	60	69	0	0
+NA	NA	AMER1	NA	NA	NA	NA	1353	62	1545	55	148	0	0
+210649_s_at	8289	ARID1A	AT-rich interaction domain 1A	0	1	ARID1A|8289	858	0	2591	70	406	0	54
+205345_at	580	BARD1	BRCA1 associated RING domain 1	0	1	BARD1|580	1140	0	1487	55	58	0	177
+220115_s_at	1008	CDH10	cadherin 10	0	1	CDH10|1008	1923	297	437	0	207	314	0
+212515_s_at	1654	DDX3X	DEAD-box helicase 3, X-linked	0	1	DDX3X|1654	1143	0	1916	84	85	0	72
+205585_at	2120	ETV6	ets variant 6	0	1	ETV6|2120	2183	179	1264	76	59	0	0
+219208_at	80204	FBXO11	F-box protein 11	1	1	FBXO11|80204	1802	78	644	0	63	0	102
+218751_s_at	55294	FBXW7	F-box and WD repeat domain containing 7	0	1	FBXW7|55294	610	52	2918	82	225	0	0
+40562_at	2767	GNA11	guanine nucleotide binding protein (G protein), alpha 11 (Gq class)	1	1	GNA11|2767	1010	0	2458	74	64	0	259
+220773_s_at	10243	GPHN	gephyrin	0	1	GPHN|10243	1068	0	2467	68	66	0	68
+206534_at	2903	GRIN2A	glutamate receptor, ionotropic, N-methyl D-aspartate 2A	0	0	GRIN2A|2903	2044	141	1344	0	252	65	0
+205376_at	8821	INPP4B	inositol polyphosphate-4-phosphatase type II B	1	1	INPP4B|8821	648	59	2707	63	75	0	0
+NA	NA	MAML2	NA	NA	NA	NA	1200	119	2196	77	66	0	0
+200600_at	4478	MSN	moesin	0	1	MSN|4478	1312	58	1533	0	61	0	56
+205455_at	4486	MST1R	macrophage stimulating 1 receptor	0	1	MST1R|4486	755	0	3042	125	82	0	57
+201146_at	4780	NFE2L2	nuclear factor, erythroid 2 like 2	1	1	NFE2L2|4780	1557	139	954	0	114	0	75
+213032_at	4781	NFIB	nuclear factor I/B	0	1	NFIB|4781	1112	116	3080	140	0	0	54
+202647_s_at	4893	NRAS	neuroblastoma RAS viral (v-ras) oncogene homolog	1	1	NRAS|4893	1183	0	1973	72	195	0	69
+219530_at	79728	PALB2	partner and localizer of BRCA2	0	1	PALB2|79728	1932	81	1289	0	70	0	57
+209337_at	11168	PSIP1	PC4 and SFRS1 interacting protein 1	1	1	PSIP1|11168	1071	95	2914	115	55	0	0
+211711_s_at	5728	PTEN	phosphatase and tensin homolog	0	1	PTEN|5728	691	0	2891	440	418	0	152
+208121_s_at	5800	PTPRO	protein tyrosine phosphatase, receptor type O	0	1	PTPRO|5800	2175	147	1182	55	95	0	0
+200608_s_at	5885	RAD21	RAD21 cohesin complex component	0	1	RAD21|5885	4401	769	435	0	64	0	70
+207624_s_at	6103	RPGR	retinitis pigmentosa GTPase regulator	0	1	RPGR|6103	1145	57	1903	81	53	0	0
+210366_at	10599	SLCO1B1	solute carrier organic anion transporter family member 1B1	0	0	SLCO1B1|10599	1237	118	436	0	58	59	0
+203075_at	4087	SMAD2	SMAD family member 2	0	1	SMAD2|4087	872	59	2988	93	57	0	0
+NA	NA	SPECC1	NA	NA	NA	NA	955	131	2815	68	74	0	0
+209794_at	9901	SRGAP3	SLIT-ROBO Rho GTPase activating protein 3	0	1	SRGAP3|9901	1198	124	2639	96	100	0	0
+202293_at	10274	STAG1	stromal antigen 1	0	1	STAG1|10274	2664	271	875	0	113	0	145
+220205_at	7179	TPTE	transmembrane phosphatase with tensin homology	0	0	TPTE|7179	743	0	1539	70	223	174	0
+NA	NA	TUBA3C	NA	NA	NA	NA	1164	73	2209	68	92	0	0
+219768_at	79679	VTCN1	V-set domain containing T cell activation inhibitor 1	0	0	VTCN1|79679	1271	76	1819	73	0	108	0
+213342_at	10413	YAP1	Yes associated protein 1	0	1	YAP1|10413	1240	169	2165	72	0	0	60
+217562_at	339479	BRINP3	bone morphogenetic protein/retinoic acid inducible neural-specific 3	0	1	FAM5C|339479	2139	206	277	0	182	526	0
+214044_at	6262	RYR2	ryanodine receptor 2	0	1	RYR2|6262	2406	275	280	0	366	93	0
+206937_at	6708	SPTA1	spectrin alpha, erythrocytic 1	0	0	SPTA1|6708	2078	279	203	0	263	225	0
+220269_at	79740	ZBBX	zinc finger, B-box domain containing	0	1	ZBBX|79740	959	288	185	0	50	181	0
+206280_at	1016	CDH18	cadherin 18	0	1	CDH18|1016	815	158	139	0	63	211	0
+208123_at	9312	KCNB2	potassium channel, voltage gated Shab related subfamily B, member 2	0	0	KCNB2|9312	1888	166	267	0	147	290	0
+206990_at	7143	TNR	tenascin R	0	0	TNR|7143	1166	102	182	0	153	231	0
+207149_at	1010	CDH12	cadherin 12	0	0	CDH12|1010	875	186	132	0	63	145	0
+210168_at	729	C6	complement component 6	0	1	C6|729	802	127	159	0	109	149	0
+213332_at	60676	PAPPA2	pappalysin 2	0	0	PAPPA2|60676	945	78	103	0	176	107	0
+206290_s_at	6000	RGS7	regulator of G-protein signaling 7	0	1	RGS7|6000	1406	142	173	0	76	246	0
+206403_at	9745	ZNF536	zinc finger protein 536	0	1	ZNF536|9745	352	69	193	0	75	295	0
+205433_at	590	BCHE	butyrylcholinesterase	0	1	BCHE|590	1097	339	91	0	52	70	0
+NA	NA	A2ML1	NA	NA	NA	NA	2268	177	1161	0	121	0	0
+NA	NA	AADACL2	NA	NA	NA	NA	2882	442	714	0	52	0	0
+NA	NA	AARS2	NA	NA	NA	NA	1978	202	1079	0	60	0	0
+NA	NA	ABCA9	NA	NA	NA	NA	2530	252	948	0	132	0	0
+209993_at	5243	ABCB1	ATP binding cassette subfamily B member 1	0	1	ABCB1|5243	3110	161	627	0	175	0	0
+206411_s_at	27	ABL2	ABL proto-oncogene 2, non-receptor tyrosine kinase	0	0	ABL2|27	3648	343	442	0	80	0	0
+AFFX-HSAC07/X00351_5_at	60	ACTB	actin, beta	0	1	ACTB|60	3564	180	648	0	55	0	0
+213198_at	91	ACVR1B	activin A receptor type IB	0	1	ACVR1B|91	1688	67	1023	0	62	0	0
+205735_s_at	3899	AFF3	AF4/FMR2 family member 3	0	0	AFF3|3899	1502	64	754	0	139	0	0
+210962_s_at	10142	AKAP9	A-kinase anchoring protein 9	0	1	AKAP9|10142	3394	213	614	0	244	0	0
+212286_at	23253	ANKRD12	ankyrin repeat domain 12	0	1	ANKRD12|23253	1480	96	2279	0	129	0	0
+211110_s_at	367	AR	androgen receptor	0	1	AR|367	1391	66	1636	0	99	0	0
+205068_s_at	23092	ARHGAP26	Rho GTPase activating protein 26	0	1	ARHGAP26|23092	1328	136	2145	0	62	0	0
+202045_s_at	2909	ARHGAP35	Rho GTPase activating protein 35	0	1	GRLF1|2909	1585	54	1799	0	165	0	0
+NA	NA	ARID1B	NA	NA	NA	NA	948	0	2603	124	161	0	0
+NA	NA	ARID2	NA	NA	NA	NA	1844	81	1071	0	189	0	0
+212614_at	84159	ARID5B	AT-rich interaction domain 5B	1	1	ARID5B|84159	972	85	2295	0	108	0	0
+218908_at	79058	ASPSCR1	alveolar soft part sarcoma chromosome region, candidate 1	0	1	ASPSCR1|79058	2505	240	1075	0	0	72	0
+212238_at	171023	ASXL1	additional sex combs like 1, transcriptional regulator	0	1	ASXL1|171023	3579	252	237	0	117	0	0
+NA	NA	ASXL3	NA	NA	NA	NA	1028	86	2836	0	258	0	0
+222103_at	466	ATF1	activating transcription factor 1	1	1	ATF1|466	1673	62	1031	0	0	0	54
+40489_at	1822	ATN1	atrophin 1	0	1	ATN1|1822	2366	220	1083	0	80	0	0
+209903_s_at	545	ATR	ATR serine/threonine kinase	0	1	ATR|545	2777	343	880	0	180	0	0
+208860_s_at	546	ATRX	alpha thalassemia/mental retardation syndrome X-linked	0	1	ATRX|546	1199	0	1667	58	346	0	0
+NA	NA	AXIN2	NA	NA	NA	NA	2511	251	952	0	69	0	0
+202686_s_at	558	AXL	AXL receptor tyrosine kinase	0	1	AXL|558	1750	116	1569	0	86	0	0
+216231_s_at	567	B2M	beta-2-microglobulin	0	1	B2M|567	720	0	2432	106	63	0	0
+215990_s_at	604	BCL6	B-cell CLL/lymphoma 6	0	1	BCL6|604	3068	648	733	0	77	0	0
+203795_s_at	605	BCL7A	B-cell CLL/lymphoma 7A	0	1	BCL7A|605	1542	58	1252	0	0	0	53
+204129_at	607	BCL9	B-cell CLL/lymphoma 9	0	1	BCL9|607	3259	493	840	0	102	0	0
+219444_at	63035	BCORL1	BCL6 corepressor-like 1	0	1	BCORL1|63035	1496	64	1574	0	147	0	0
+202315_s_at	613	BCR	breakpoint cluster region	0	1	BCR|613	1326	121	2384	0	63	0	0
+213578_at	657	BMPR1A	bone morphogenetic protein receptor type 1A	0	1	BMPR1A|657	742	0	2522	101	0	0	77
+206044_s_at	673	BRAF	B-Raf proto-oncogene, serine/threonine kinase	0	1	BRAF|673	3108	164	959	0	527	0	0
+204531_s_at	672	BRCA1	breast cancer 1	1	1	BRCA1|672	1853	71	1541	0	131	0	0
+221703_at	83990	BRIP1	BRCA1 interacting protein C-terminal helicase 1	0	1	BRIP1|83990	2473	281	973	0	94	0	0
+NA	NA	BRSK1	NA	NA	NA	NA	1807	121	1635	0	69	0	0
+206727_at	735	C9	complement component 9	0	0	C9|735	460	67	109	0	0	162	0
+202715_at	790	CAD	carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase	0	1	CAD|790	1795	78	688	0	142	0	0
+NA	NA	CARD11	NA	NA	NA	NA	3528	163	706	0	160	0	0
+NA	NA	CD274	NA	NA	NA	NA	1194	159	3023	131	0	0	0
+207172_s_at	1009	CDH11	cadherin 11	0	1	CDH11|1009	1281	0	2560	56	117	0	0
+219226_at	51755	CDK12	cyclin-dependent kinase 12	0	1	CDK12|51755	2077	318	1412	0	122	0	0
+202246_s_at	1019	CDK4	cyclin-dependent kinase 4	1	1	CDK4|1019	1755	220	903	0	0	103	0
+206387_at	1045	CDX2	caudal type homeobox 2	0	0	CDX2|1045	1284	105	2664	0	0	177	0
+201183_s_at	1108	CHD4	chromodomain helicase DNA binding protein 4	0	1	CHD4|1108	2377	222	1085	0	208	0	0
+210416_s_at	11200	CHEK2	checkpoint kinase 2	1	1	CHEK2|11200	1282	65	2622	0	96	0	0
+212784_at	23152	CIC	capicua transcriptional repressor	0	1	CIC|23152	1718	99	1641	0	168	0	0
+205101_at	4261	CIITA	class II, major histocompatibility complex, transactivator	0	1	CIITA|4261	2087	143	1306	0	91	0	0
+200614_at	1213	CLTC	clathrin heavy chain	1	1	CLTC|1213	2437	266	1039	0	89	0	0
+205944_s_at	8218	CLTCL1	clathrin heavy chain like 1	0	1	CLTCL1|8218	1425	138	2515	0	108	0	0
+205642_at	11064	CNTRL	centriolin	0	1	CEP110|11064	1231	57	2198	0	117	0	0
+202310_s_at	1277	COL1A1	collagen type I alpha 1	1	1	COL1A1|1277	2160	175	1108	0	118	0	0
+203104_at	1436	CSF1R	colony stimulating factor 1 receptor	0	1	CSF1R|1436	1342	125	1878	0	61	0	0
+203591_s_at	1441	CSF3R	colony stimulating factor 3 receptor	0	1	CSF3R|1441	1170	85	1952	0	73	0	0
+202521_at	10664	CTCF	CCCTC-binding factor (zinc finger protein)	0	1	CTCF|10664	1330	0	2585	61	130	0	0
+201533_at	1499	CTNNB1	catenin beta 1	0	1	CTNNB1|1499	904	0	2876	97	226	0	0
+201371_s_at	8452	CUL3	cullin 3	0	1	CUL3|8452	1130	0	1600	77	69	0	0
+201423_s_at	8451	CUL4A	cullin 4A	0	1	CUL4A|8451	1770	193	2320	0	0	0	51
+214743_at	1523	CUX1	cut-like homeobox 1	0	1	CUX1|1523	3312	191	728	0	146	0	0
+39582_at	1540	CYLD	cylindromatosis (turban tumor syndrome)	0	1	CYLD|1540	1170	0	2333	64	75	0	0
+205502_at	1586	CYP17A1	cytochrome P450 family 17 subfamily A member 1	0	0	CYP17A1|1586	699	0	2592	53	0	282	0
+201763_s_at	1616	DAXX	death-domain associated protein	1	1	DAXX|1616	1880	101	1213	0	50	0	0
+218583_s_at	54165	DCUN1D1	defective in cullin neddylation 1 domain containing 1	0	1	DCUN1D1|54165	3138	726	654	0	0	0	78
+205168_at	4921	DDR2	discoidin domain receptor tyrosine kinase 2	0	1	DDR2|4921	3674	476	428	0	80	0	0
+200033_at	1655	DDX5	DEAD-box helicase 5	0	1	DDX5|1655	2512	266	942	0	54	0	0
+200934_at	7913	DEK	DEK proto-oncogene	0	1	DEK|7913	2040	195	1115	0	0	0	52
+212888_at	23405	DICER1	dicer 1 ribonuclease III	0	1	DICER1|23405	1274	53	2362	0	129	0	0
+201479_at	1736	DKC1	dyskeratosis congenita 1, dyskerin	0	1	DKC1|1736	1742	188	1522	63	0	0	0
+NA	NA	DNAH12	NA	NA	NA	NA	852	0	3120	105	86	0	0
+200666_s_at	3337	DNAJB1	DnaJ heat shock protein family (Hsp40) member B1	1	1	DNAJB1|3337	1520	154	1586	0	0	154	0
+202253_s_at	1785	DNM2	dynamin 2	0	1	DNM2|1785	1495	181	1785	0	62	0	0
+201697_s_at	1786	DNMT1	DNA (cytosine-5-)-methyltransferase 1	1	1	DNMT1|1786	1514	154	1836	0	106	0	0
+218457_s_at	1788	DNMT3A	DNA (cytosine-5-)-methyltransferase 3 alpha	1	1	DNMT3A|1788	1763	70	768	0	135	0	0
+220668_s_at	1789	DNMT3B	DNA (cytosine-5-)-methyltransferase 3 beta	0	1	DNMT3B|1789	3585	213	250	0	76	0	0
+NA	NA	DTX1	NA	NA	NA	NA	1595	55	1236	0	62	0	0
+205777_at	1852	DUSP9	dual specificity phosphatase 9	0	0	DUSP9|1852	1734	194	1482	0	0	105	0
+NA	NA	EBF1	NA	NA	NA	NA	1389	129	2180	0	66	0	0
+200912_s_at	1974	EIF4A2	eukaryotic translation initiation factor 4A2	0	1	EIF4A2|1974	3103	658	719	0	51	0	0
+221539_at	1978	EIF4EBP1	eukaryotic translation initiation factor 4E binding protein 1	1	1	EIF4EBP1|1978	2304	406	2239	134	0	0	0
+212670_at	2006	ELN	elastin	0	1	ELN|2006	3222	105	621	0	73	0	0
+220386_s_at	27436	EML4	echinoderm microtubule associated protein like 4	0	1	EML4|27436	1845	87	722	0	55	0	0
+201839_s_at	4072	EPCAM	epithelial cell adhesion molecule	0	1	EPCAM|4072	1845	99	658	0	0	0	81
+NA	NA	EPHA10	NA	NA	NA	NA	1216	102	1948	0	89	0	0
+NA	NA	EPHA6	NA	NA	NA	NA	2219	177	1145	0	164	0	0
+211898_s_at	2047	EPHB1	EPH receptor B1	0	1	EPHB1|2047	2642	240	886	0	149	0	0
+209588_at	2048	EPHB2	EPH receptor B2	1	1	EPHB2|2048	897	0	2586	50	91	0	0
+1438_at	2049	EPHB3	EPH receptor B3	0	1	EPHB3|2049	3127	694	669	0	71	0	0
+204718_at	2051	EPHB6	EPH receptor B6	0	1	EPHB6|2051	3031	131	962	0	110	0	0
+208156_x_at	83481	EPPK1	epiplakin 1	0	1	EPPK1|83481	4356	763	584	0	196	0	0
+215606_s_at	23085	ERC1	ELKS/RAB6-interacting/CAST family member 1	0	1	ERC1|23085	2431	277	1078	0	75	0	0
+213468_at	2068	ERCC2	excision repair cross-complementation group 2	0	1	ERCC2|2068	1701	107	1664	0	72	0	0
+202176_at	2071	ERCC3	excision repair cross-complementation group 3	0	1	ERCC3|2071	1312	0	965	0	57	0	53
+202414_at	2073	ERCC5	excision repair cross-complementation group 5	0	1	ERCC5|2073	1685	132	2403	0	77	0	0
+213541_s_at	2078	ERG	v-ets avian erythroblastosis virus E26 oncogene homolog	0	1	ERG|2078	1313	64	2243	105	0	0	0
+NA	NA	ERRFI1	NA	NA	NA	NA	1016	67	2483	84	0	0	0
+NA	NA	ESCO1	NA	NA	NA	NA	1348	128	2193	0	53	0	0
+211603_s_at	2118	ETV4	ets variant 4	0	1	ETV4|2118	1530	67	1418	0	0	0	56
+209214_s_at	2130	EWSR1	EWS RNA binding protein 1	0	1	EWSR1|2130	1298	84	2492	0	55	0	0
+NA	NA	EXOSC6	NA	NA	NA	NA	1309	62	2467	66	0	0	0
+201995_at	2131	EXT1	exostosin glycosyltransferase 1	1	1	EXT1|2131	4425	788	445	0	58	0	0
+NA	NA	FAM47C	NA	NA	NA	NA	905	0	1466	50	184	0	0
+203805_s_at	2175	FANCA	Fanconi anemia complementation group A	0	1	FANCA|2175	1320	0	2919	142	82	0	0
+213007_at	55215	FANCI	Fanconi anemia complementation group I	0	1	FANCI|55215	1313	128	1845	0	65	0	0
+219427_at	79633	FAT4	FAT atypical cadherin 4	0	1	FAT4|79633	605	0	2839	50	452	0	0
+NA	NA	FCRL4	NA	NA	NA	NA	3645	417	385	0	79	0	0
+214589_at	2257	FGF12	fibroblast growth factor 12	0	1	FGF12|2257	3051	658	938	0	0	54	0
+221007_s_at	81608	FIP1L1	factor interacting with PAPOLA and CPSF1	0	0	FIP1L1|81608	1064	163	2030	0	50	0	0
+215645_at	201163	FLCN	folliculin	0	1	FLCN|201163	920	71	3264	67	0	0	0
+210786_s_at	2313	FLI1	Fli-1 proto-oncogene, ETS transcription factor	0	1	FLI1|2313	1051	73	2573	130	0	0	0
+210316_at	2324	FLT4	fms related tyrosine kinase 4	0	1	FLT4|2324	1568	168	2160	0	125	0	0
+204131_s_at	2309	FOXO3	forkhead box O3	1	1	FOXO3|2309	966	64	2474	145	0	0	0
+204145_at	2483	FRG1	FSHD region gene 1	0	1	FRG1|2483	181	0	581	0	69	0	66
+NA	NA	FRG1BP	NA	NA	NA	NA	1463	62	253	0	268	0	0
+221308_at	10818	FRS2	fibroblast growth factor receptor substrate 2	1	1	FRS2|10818	2092	308	864	0	0	108	0
+203592_s_at	10272	FSTL3	follistatin like 3	0	1	FSTL3|10272	1131	70	2546	80	0	0	0
+210105_s_at	2534	FYN	FYN proto-oncogene, Src family tyrosine kinase	1	1	FYN|2534	971	71	2419	138	0	0	0
+219764_at	11211	FZD10	frizzled class receptor 10	0	1	FZD10|11211	1662	55	1356	0	73	0	0
+209304_x_at	4616	GADD45B	growth arrest and DNA damage inducible beta	1	1	GADD45B|4616	1085	57	2472	68	0	0	0
+209603_at	2625	GATA3	GATA binding protein 3	1	1	GATA3|2625	1524	158	1867	0	154	0	0
+220058_at	79018	GID4	GID complex subunit 4 homolog	0	1	C17orf39|79018	912	77	3099	60	0	0	0
+206646_at	2735	GLI1	GLI family zinc finger 1	0	1	GLI1|2735	1787	126	955	0	93	0	0
+205201_at	2737	GLI3	GLI family zinc finger 3	0	1	GLI3|2737	3442	97	569	0	175	0	0
+214431_at	8833	GMPS	guanine monophosphate synthase	0	1	GMPS|8833	2920	446	706	0	52	0	0
+200981_x_at	2778	GNAS	GNAS complex locus	1	1	GNAS|2778	3694	299	323	0	120	0	0
+217803_at	64083	GOLPH3	golgi phosphoprotein 3	0	1	GOLPH3|64083	2913	342	758	0	0	0	87
+NA	NA	GOPC	NA	NA	NA	NA	972	57	2429	131	0	0	0
+209220_at	2719	GPC3	glypican 3	0	1	GPC3|2719	1492	85	1468	0	56	0	0
+207174_at	2262	GPC5	glypican 5	0	1	GPC5|2262	610	0	1010	0	84	196	0
+204318_s_at	51512	GTSE1	G2 and S-phase expressed 1	0	1	GTSE1|51512	1144	0	2791	95	51	0	0
+204225_at	9759	HDAC4	histone deacetylase 4	0	1	HDAC4|9759	1111	0	1797	148	88	0	0
+44783_s_at	23462	HEY1	hes-related family bHLH transcription factor with YRPW motif 1	0	1	HEY1|23462	3960	432	551	0	0	78	0
+209960_at	3082	HGF	hepatocyte growth factor (hepapoietin A; scatter factor)	0	1	HGF|3082	3071	116	640	0	118	0	0
+208025_s_at	8091	HMGA2	high mobility group AT-hook 2	1	1	HMGA2|8091	1754	192	854	0	0	66	0
+213823_at	3207	HOXA11	homeobox A11	0	1	HOXA11|3207	3157	146	563	0	0	169	0
+209844_at	10481	HOXB13	homeobox B13	0	0	HOXB13|10481	2074	147	1120	0	0	400	0
+206745_at	3227	HOXC11	homeobox C11	0	1	HOXC11|3227	1662	59	986	0	0	229	0
+219832_s_at	3229	HOXC13	homeobox C13	0	1	HOXC13|3229	1605	56	1000	0	0	327	0
+207398_at	3239	HOXD13	homeobox D13	0	0	HOXD13|3239	1381	97	929	0	0	412	0
+212983_at	3265	HRAS	Harvey rat sarcoma viral oncogene homolog	0	1	HRAS|3265	872	0	2386	91	70	0	0
+200064_at	3326	HSP90AB1	heat shock protein 90kDa alpha family class B member 1	0	1	HSP90AB1|3326	2020	209	1141	0	72	0	0
+209654_at	23379	ICE1	interactor of little elongation complex ELL subunit 1	0	1	KIAA0947|23379	3014	394	843	0	162	0	0
+211676_s_at	3459	IFNGR1	interferon gamma receptor 1	0	1	IFNGR1|3459	1061	76	2403	65	0	0	0
+203627_at	3480	IGF1R	insulin like growth factor 1 receptor	1	1	IGF1R|3480	1409	181	1823	0	93	0	0
+204549_at	9641	IKBKE	inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase epsilon	1	1	IKBKE|9641	3552	355	623	0	59	0	0
+205039_s_at	10320	IKZF1	IKAROS family zinc finger 1	1	1	IKZF1|10320	3221	110	539	0	55	0	0
+220567_at	22807	IKZF2	IKAROS family zinc finger 2	0	1	IKZF2|22807	1221	0	1488	85	63	0	0
+221658_s_at	50615	IL21R	interleukin 21 receptor	0	1	IL21R|50615	2019	90	1217	0	73	0	0
+205798_at	3575	IL7R	interleukin 7 receptor	0	1	IL7R|3575	2901	349	751	0	101	0	0
+210511_s_at	3624	INHBA	inhibin beta A	0	1	INHBA|3624	3287	84	566	0	82	0	0
+204552_at	3631	INPP4A	inositol polyphosphate-4-phosphatase type I A	0	1	INPP4A|3631	1554	66	651	0	65	0	0
+203331_s_at	3635	INPP5D	inositol polyphosphate-5-phosphatase D	0	1	INPP5D|3635	1082	0	1731	110	91	0	0
+213792_s_at	3643	INSR	insulin receptor	0	1	INSR|3643	1240	85	2108	0	108	0	0
+202531_at	3659	IRF1	interferon regulatory factor 1	0	1	IRF1|3659	1267	112	2319	55	0	0	0
+204562_at	3662	IRF4	interferon regulatory factor 4	0	1	IRF4|3662	1993	159	1449	77	0	0	0
+213475_s_at	3683	ITGAL	integrin subunit alpha L	0	1	ITGAL|3683	2112	128	1187	0	118	0	0
+211339_s_at	3702	ITK	IL2 inducible T-cell kinase	0	1	ITK|3702	1374	116	2165	0	71	0	0
+207187_at	3718	JAK3	Janus kinase 3	0	1	JAK3|3718	1534	133	1545	0	93	0	0
+203298_s_at	3720	JARID2	jumonji and AT-rich interaction domain containing 2	0	1	JARID2|3720	2043	167	1242	0	117	0	0
+208404_x_at	3762	KCNJ5	potassium channel, inwardly rectifying subfamily J, member 5	0	0	KCNJ5|3762	1057	78	2581	127	0	0	0
+NA	NA	KDM2B	NA	NA	NA	NA	1730	66	1294	0	96	0	0
+202040_s_at	5927	KDM5A	lysine (K)-specific demethylase 5A	1	1	KDM5A|5927	2447	272	1067	0	109	0	0
+203934_at	3791	KDR	kinase insert domain receptor	0	1	KDR|3791	1016	133	1997	0	177	0	0
+202417_at	9817	KEAP1	kelch like ECH associated protein 1	1	1	KEAP1|9817	1527	161	1828	0	121	0	0
+212779_at	84162	KIAA1109	KIAA1109	0	1	KIAA1109|84162	612	0	2767	0	274	0	63
+NA	NA	KIAA1549	NA	NA	NA	NA	3110	141	935	0	144	0	0
+NA	NA	KLHL6	NA	NA	NA	NA	3141	720	657	0	66	0	0
+209854_s_at	3817	KLK2	kallikrein related peptidase 2	0	0	KLK2|3817	1653	67	1620	0	0	276	0
+203419_at	9757	KMT2B	lysine (K)-specific methyltransferase 2B	0	1	MLL4|9757	2060	248	1267	0	213	0	0
+216845_x_at	8085	KMT2D	lysine (K)-specific methyltransferase 2D	0	0	MLL2|8085	1784	0	1051	0	466	0	52
+200915_x_at	3895	KTN1	kinectin 1	1	1	KTN1|3895	1144	0	2114	0	79	0	78
+200618_at	3927	LASP1	LIM and SH3 protein 1	0	1	LASP1|3927	1895	180	1417	0	0	51	0
+208885_at	3936	LCP1	lymphocyte cytosolic protein 1 (L-plastin)	0	1	LCP1|3936	1183	0	3078	190	58	0	0
+NA	NA	LGR6	NA	NA	NA	NA	3566	355	517	0	81	0	0
+218656_s_at	10186	LHFP	lipoma HMGIC fusion partner	0	1	LHFP|10186	1248	73	3029	173	0	0	0
+205876_at	3977	LIFR	leukemia inhibitory factor receptor alpha	0	1	LIFR|3977	2849	364	644	0	127	0	0
+NA	NA	LRIG3	NA	NA	NA	NA	1785	120	956	0	71	0	0
+209468_at	4041	LRP5	LDL receptor related protein 5	0	1	LRP5|4041	1706	276	1369	0	104	0	0
+NA	NA	LRRK2	NA	NA	NA	NA	1919	78	979	0	228	0	0
+209737_at	9863	MAGI2	membrane associated guanylate kinase, WW and PDZ domain containing 2	0	1	MAGI2|9863	3226	128	700	0	158	0	0
+202424_at	5605	MAP2K2	mitogen-activated protein kinase kinase 2	0	1	MAP2K2|5605	1124	56	2410	63	0	0	0
+214786_at	4214	MAP3K1	mitogen-activated protein kinase kinase kinase 1, E3 ubiquitin protein ligase	0	1	MAP3K1|4214	1137	0	2378	114	150	0	0
+206249_at	9175	MAP3K13	mitogen-activated protein kinase kinase kinase 13	0	1	MAP3K13|9175	3106	680	687	0	80	0	0
+204089_x_at	4216	MAP3K4	mitogen-activated protein kinase kinase kinase 4	1	1	MAP3K4|4216	948	0	2635	93	131	0	0
+206571_s_at	9448	MAP4K4	mitogen-activated protein kinase kinase kinase kinase 4	1	1	MAP4K4|9448	1444	62	738	0	66	0	0
+212271_at	5594	MAPK1	mitogen-activated protein kinase 1	0	1	MAPK1|5594	1333	116	2299	0	0	0	55
+203062_s_at	9656	MDC1	mediator of DNA damage checkpoint 1	0	1	MDC1|9656	2020	164	1083	0	126	0	0
+217373_x_at	4193	MDM2	MDM2 proto-oncogene, E3 ubiquitin protein ligase	0	1	MDM2|4193	2108	312	883	0	0	115	0
+221884_at	2122	MECOM	MDS1 and EVI1 complex locus	0	1	MECOM|2122	3249	804	719	0	159	0	0
+203506_s_at	9968	MED12	mediator complex subunit 12	0	1	MED12|9968	1319	0	1585	0	170	0	100
+214684_at	4205	MEF2A	myocyte enhancer factor 2A	0	1	MEF2A|4205	1429	175	1849	0	0	0	110
+207968_s_at	4208	MEF2C	myocyte enhancer factor 2C	1	1	MEF2C|4208	1016	0	2673	97	52	0	0
+202645_s_at	4221	MEN1	menin 1	0	1	MEN1|4221	1332	63	1479	0	56	0	0
+203510_at	4233	MET	MET proto-oncogene, receptor tyrosine kinase	0	1	MET|4233	3049	166	856	0	119	0	0
+NA	NA	MIB1	NA	NA	NA	NA	1371	156	2097	0	56	0	0
+212022_s_at	4288	MKI67	marker of proliferation Ki-67	0	1	MKI67|4288	868	0	2652	58	234	0	0
+212748_at	57591	MKL1	megakaryoblastic leukemia (translocation) 1	0	1	MKL1|57591	1205	59	2593	0	70	0	0
+204784_s_at	4291	MLF1	myeloid leukemia factor 1	0	1	MLF1|4291	2840	474	694	0	0	0	62
+205330_at	4330	MN1	meningioma (disrupted in balanced translocation) 1	0	1	MN1|4330	1269	59	2568	0	95	0	0
+209421_at	4436	MSH2	mutS homolog 2	0	1	MSH2|4436	1872	99	687	0	53	0	0
+210947_s_at	4437	MSH3	mutS homolog 3	0	1	MSH3|4437	1010	0	2639	83	90	0	0
+202911_at	2956	MSH6	mutS homolog 6	1	1	MSH6|2956	1776	78	696	0	87	0	0
+NA	NA	MTCP1	NA	NA	NA	NA	1742	188	1522	63	0	0	0
+204673_at	4583	MUC2	mucin 2, oligomeric mucus/gel-forming	0	0	MUC2|4583	161	0	422	0	155	168	0
+214133_at	4588	MUC6	mucin 6, oligomeric mucus/gel-forming	0	0	MUC6|4588	132	0	240	0	124	99	0
+201497_x_at	4629	MYH11	myosin, heavy chain 11, smooth muscle	0	1	MYH11|4629	2064	129	1302	0	177	0	0
+NA	NA	MYO18A	NA	NA	NA	NA	1945	161	1497	0	97	0	0
+204823_at	89795	NAV3	neuron navigator 3	0	1	NAV3|89795	1752	79	1159	0	289	0	0
+209106_at	8648	NCOA1	nuclear receptor coactivator 1	0	1	NCOA1|8648	1767	80	759	0	94	0	0
+207700_s_at	8202	NCOA3	nuclear receptor coactivator 3	1	1	NCOA3|8202	3665	252	338	0	123	0	0
+210774_s_at	8031	NCOA4	nuclear receptor coactivator 4	0	1	NCOA4|8031	973	59	2164	62	0	0	0
+207760_s_at	9612	NCOR2	nuclear receptor corepressor 2	0	1	NCOR2|9612	1694	77	1312	0	159	0	0
+218915_at	4771	NF2	neurofibromin 2 (merlin)	0	1	NF2|4771	1308	84	2550	0	57	0	0
+204702_s_at	9603	NFE2L3	nuclear factor, erythroid 2 like 3	0	1	NFE2L3|9603	3518	156	574	0	62	0	0
+219285_s_at	51199	NIN	ninein	0	1	NIN|51199	1331	77	2136	0	117	0	0
+207075_at	114548	NLRP3	NLR family, pyrin domain containing 3	0	1	NLRP3|114548	3555	395	702	0	161	0	0
+221073_s_at	10392	NOD1	nucleotide binding oligomerization domain containing 1	0	1	NOD1|10392	3485	144	546	0	67	0	0
+218902_at	4851	NOTCH1	notch 1	1	1	NOTCH1|4851	1338	97	2367	0	209	0	0
+202443_x_at	4853	NOTCH2	notch 2	0	1	NOTCH2|4853	3213	524	1224	0	208	0	0
+203238_s_at	4854	NOTCH3	notch 3	0	1	NOTCH3|4854	1651	182	1588	0	157	0	0
+205247_at	4855	NOTCH4	notch 4	0	1	NOTCH4|4855	2002	152	1216	0	176	0	0
+221691_x_at	4869	NPM1	nucleophosmin (nucleolar phosphoprotein B23, numatrin)	0	1	NPM1|4869	1483	159	2080	0	63	0	0
+216321_s_at	2908	NR3C1	nuclear receptor subfamily 3 group C member 1	1	1	NR3C1|2908	1339	124	2201	0	55	0	0
+208605_s_at	4914	NTRK1	neurotrophic tyrosine kinase, receptor, type 1	0	0	NTRK1|4914	3730	433	376	0	93	0	0
+217377_x_at	4916	NTRK3	neurotrophic tyrosine kinase, receptor, type 3	0	1	NTRK3|4916	1233	111	1855	0	120	0	0
+202155_s_at	8021	NUP214	nucleoporin 214kDa	0	1	NUP214|8021	1268	66	2304	0	111	0	0
+202188_at	9688	NUP93	nucleoporin 93kDa	1	1	NUP93|9688	1157	0	2532	55	51	0	0
+NA	NA	NUTM1	NA	NA	NA	NA	806	0	2489	80	99	0	0
+220427_at	84033	OBSCN	obscurin, cytoskeletal calmodulin and titin-interacting RhoGEF	0	0	OBSCN|84033	3523	339	699	0	430	0	0
+NA	NA	OR10G4	NA	NA	NA	NA	546	0	1504	53	55	0	0
+NA	NA	OR10T2	NA	NA	NA	NA	1877	194	186	0	55	0	0
+NA	NA	OR10X1	NA	NA	NA	NA	2370	234	233	0	65	0	0
+NA	NA	OR2G3	NA	NA	NA	NA	2091	265	229	0	75	0	0
+NA	NA	OR2L3	NA	NA	NA	NA	2870	322	386	0	86	0	0
+NA	NA	OR2L8	NA	NA	NA	NA	2803	325	499	0	87	0	0
+NA	NA	OR2M2	NA	NA	NA	NA	1555	141	325	0	80	0	0
+NA	NA	OR2M3	NA	NA	NA	NA	2027	175	470	0	84	0	0
+NA	NA	OR2M5	NA	NA	NA	NA	2614	317	349	0	98	0	0
+NA	NA	OR2T12	NA	NA	NA	NA	2836	328	507	0	98	0	0
+NA	NA	OR2T2	NA	NA	NA	NA	1749	237	271	0	55	0	0
+NA	NA	OR2T33	NA	NA	NA	NA	2194	268	401	0	72	0	0
+NA	NA	OR4K2	NA	NA	NA	NA	1030	67	1304	0	76	0	0
+NA	NA	OR4K5	NA	NA	NA	NA	820	50	1225	0	80	0	0
+NA	NA	OR4M2	NA	NA	NA	NA	502	0	1473	57	98	0	0
+NA	NA	OR4N2	NA	NA	NA	NA	798	59	1093	0	92	0	0
+NA	NA	OR4N4	NA	NA	NA	NA	602	0	1786	66	75	0	0
+NA	NA	OR4Q3	NA	NA	NA	NA	971	59	1277	0	81	0	0
+208644_at	142	PARP1	poly(ADP-ribose) polymerase 1	1	1	PARP1|142	3522	335	635	0	62	0	0
+213534_s_at	23178	PASK	PAS domain containing serine/threonine kinase	0	1	PASK|23178	1098	0	1866	149	96	0	0
+221969_at	5079	PAX5	paired box 5	0	1	PAX5|5079	1161	110	2289	0	0	160	0
+220355_s_at	55193	PBRM1	polybromo 1	0	1	PBRM1|55193	853	0	3166	135	248	0	0
+204476_s_at	5091	PC	pyruvate carboxylase	0	1	PC|5091	1644	212	1305	0	84	0	0
+213558_at	27445	PCLO	piccolo presynaptic cytomatrix protein	0	1	PCLO|27445	3267	132	667	0	552	0	0
+202174_s_at	5108	PCM1	pericentriolar material 1	1	1	PCM1|5108	1360	0	3641	379	73	0	0
+212422_at	22984	PDCD11	programmed cell death 11	0	1	PDCD11|22984	681	0	2622	56	112	0	0
+220049_s_at	80380	PDCD1LG2	programmed cell death 1 ligand 2	0	1	PDCD1LG2|80380	1193	159	3025	131	0	0	0
+212390_at	9659	PDE4DIP	phosphodiesterase 4D interacting protein	0	1	PDE4DIP|9659	3263	493	901	0	258	0	0

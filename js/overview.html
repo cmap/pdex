@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://clue.io/morpheus/js/morpheus-latest.min.js"></script>
+	<script src="https://clue.io/morpheus/js/morpheus-external-latest.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	
+	<link href="https://clue.io/morpheus/css/morpheus-latest.min.css" rel="stylesheet" />
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" /> -->
+	<!-- <link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet" /> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+	<link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+	<!-- bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://clue.io/public/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700|Roboto+Condensed:400,300,700|Roboto+Slab:100,300,400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet" type="text/css">
+	<link href="https://clue.io/public/css/dist/clue.all.min.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/dist/clue.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/lib/gridstack.min.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/lib/gridstack-extra.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/local/command.css" rel="stylesheet">
+	<link href="https://clue.io/public/scss/local/elements/_typography.scss" rel="stylesheet">
+</head>
+<body>
+<header>
+	<div style="margin:0" class="row">
+		<div id="header-bar" style="padding-left:0;padding-right:0;" class="col-xs-12 header-dark">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<!--Used in app header-->
+				<div id="main-header-bar" style="display: flex;" class="flex">
+					<a href="/"><img src="https://clue.io/public/img/logos/banner-logo.svg" style="padding-right:5px;"></a>
+					<span id="header-app-location" style="" class="clue_app hidden-xs">
+						<span id="header-clue-app" style="">CLUE APP&nbsp;</span>
+						<span id="header-app-title" style="cursor: pointer;" class="app_name" data-app-title="PDEx">PDEx</span>
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="container-fluid">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+	<h2>Sets created from alterations in TCGA samples</h2>
+	<p>13302 sets from mutations, copy number alterations and outlier (|ZS| >4) in 6979 unique genes. To create a set, an alteration must be present in 50 or more TCGA samples.</p>
+	<hr>
+	<table id="geneSets" class="display">
+		<thead>
+			<tr>
+				<th rowspan=2 colspan="2">Gene Info -  Click a row to see CMap connections to sample sets</th>
+				<th colspan="7"># TCGA samples in set (10255 total, min set size=50)</th>
+			</tr>
+			<th colspan="4">Copy number alterations</th>
+			<th colspan="1"></th>
+			<th colspan="2">Expression outliers</th>
+			<tr>
+				<th>Symbol</th>
+				<th>Description</th>
+				<th>Gain</th>
+				<th>Deep Amplification</th>
+				<th>Loss</th>
+				<th>Deep Loss</th>
+				<th>Mutations</th>
+				<th>Positive</th>
+				<th>Negative</th>
+			</tr>
+		</thead>
+	</table>
+	<div  class="col-md-6" id="exHist" style="height:450px;"></div>
+	<div  class="col-md-6" id="zsHist" style="height:450px;"></div>
+	<div class="col-md-1"></div>
+
+</div>
+
+</body>	
+
+<!-- define some things  -->
+<script type="text/javascript">
+	function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index; }
+
+    function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
+</script>
+
+<script>
+	var exPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/small_ex_n500x434.gct");
+	var zsPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/small_zs_n500x434.gct");
+	var exData;
+	var zsData;
+	var geneStatsData;
+	var exConcat = [];
+	var zsConcat = [];
+	
+	var symbolIdVector;
+	var symbolStatsVector;
+	var symbolStatsToIndexMap;
+	var rowIdToIndexMap;
+
+	var promises = []; 
+	promises.push(exPromise); 
+	promises.push(zsPromise);
+	$.when.apply($, promises).done(function (ds1, ds2) {
+		console.log('EX:', ds1.getRowCount(), 'x', ds1.getColumnCount());
+		for (var i = 0, nrows = ds1.getRowCount(); i < nrows; i++) {
+			for (var j = 0, ncols = ds1.getColumnCount(); j < ncols; j++) {
+				exConcat.push(ds1.getValue(i, j));	
+			}
+		}
+		makeHist(exConcat);
+		exData = ds1;
+		symbolIdVector = ds1.getRowMetadata().getByName('pr_gene_symbol');
+		rowIdToIndexMap = morpheus.VectorUtil.createValueToIndexMap(symbolIdVector);
+
+
+		console.log('ZS:', ds2.getRowCount(), 'x', ds2.getColumnCount());
+		for (var i = 0, nrows = ds2.getRowCount(); i < nrows; i++) {
+			for (var j = 0, ncols = ds2.getColumnCount(); j < ncols; j++) {
+				zsConcat.push(ds2.getValue(i, j));	
+			}
+		}
+		makeZSHist(zsConcat);
+		zsData = ds2;
+
+	});
+
+	// new geneStats dataTable?
+	var items = [];
+	var test = [];
+	var gs = $.ajax('http://bsiranosian.com/cmap_tcga/gene_centric_stats_all.txt').done(function (text) {
+			var lines = text.split(/\n/);
+			var header = lines[0].split(/\t/);
+			var nheaders = header.length;
+			for (var j = 0; j < nheaders; j++) {
+				header[j] = header[j].trim();
+			}
+			
+			for (var i = 1; i < lines.length; i++) {
+				if (lines[i] === '') {
+					continue;
+				}
+				var line = lines[i].split(/\t/);
+				var item = [];
+				for (var j = 0; j < nheaders; j++) {
+					item[j] = line[j];
+				}
+				item = item
+				var i1=item.slice(2,4);
+				var i2=i1.concat(item.slice(7,15));
+				items.push(i2);
+			}
+		console.log(items)
+		$('#geneSets').DataTable({
+			"data": items,
+			"scrollY": "500px",
+			"paging": false
+		})
+		
+		$('#geneSets tbody').on( 'click', 'tr', function () {
+			// deselect all other rows
+			$('#geneSets tbody tr').removeClass('selected');
+			
+			$(this).toggleClass('selected');
+			console.log(this);
+			var g = this.cells[0].outerText;
+			console.log(g);
+			window.open('cmap_gene.html' + '?g='+g)
+
+		})
+	}
+	).fail(function () {
+		console.log('unable to load gene_centric_stats');
+	});
+
+
+	function makeHist(values){
+		var data = [
+		{
+			x: values,
+			type: 'histogram',
+			marker: {
+				color: 'orange',
+			},
+		}];
+
+		var layout = {
+			title: 'All expressed genes <br> 10255 TCGA samples',
+			xaxis: {title: "log2RSEM GEX"}, 
+			yaxis: {title: "count"},
+			autosize: true
+		};
+
+		Plotly.newPlot('exHist', data, layout);
+
+
+	}
+	function makeZSHist(values){
+		var data = [
+		{
+			x: values,
+			type: 'histogram',
+			marker: {
+				color: 'Red',
+			},
+		}];
+
+		var layout = {
+			title: 'Z-score of all genes <br> 10255 TCGA samples',
+			xaxis: {title: "Z-score", range:[-8,20]}, 
+			yaxis: {title: "count"},
+			autosize: true
+		};
+
+		Plotly.newPlot('zsHist', data, layout);
+
+
+	}
+
+</script>
+</html>	
+
+<!-- 
+https://crossorigin.me/http://bsiranosian.com/cmap_tcga/small_ex_n500x461.gct
+
+var promise = morpheus.DatasetUtil.read('https://s3.amazonaws.com/data.clue.io/morpheus/CCLE_Expression_Entrez_2012-09-29.txt');promise.done(function (dataset) {
+   // dataset is of type morpheus.DatasetInterface
+   console.log(dataset.getRowCount(), dataset.getColumnCount());
+   for (var i = 0, nrows = dataset.getRowCount(); i < nrows; i++) {
+     for (var j = 0, ncols = dataset.getColumnCount(); j < ncols; j++) {
+       dataset.getValue(i, j);
+     }
+   }
+   var symbolIdVector = dataset.getRowMetadata().getByName('id');
+   for (var i = 0, size = symbolIdVector.size(); i < size; i++) {
+     symbolIdVector.getValue(i);
+   }
+ }).fail(function (err) {
+   console.log('error reading ', err);
+ });
+
+new messages
+[1:36]  
+var rowIdToIndexMap = morpheus.VectorUtil.createValueToIndexMap(symbolIdVector);
+   var slice = new morpheus.SlicedDatasetView(dataset, [rowIdToIndexMap.get('foo'),
+     rowIdToIndexMap.get('bar')], [9, 31, 3]); -->	

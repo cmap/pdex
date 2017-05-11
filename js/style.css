@@ -1,0 +1,17 @@
+#block_container
+{
+    text-align:center;
+}
+#bloc1, #bloc2
+{
+    display:inline;
+}
+
+div.histExGene { display: none; }
+div.histZsGene { display: none; }
+div.boxExCohort { display: none; }
+div.boxZsCohort { display: none; }
+
+.home-list {
+	font-size: 20px 
+}

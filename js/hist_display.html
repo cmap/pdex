@@ -1,0 +1,383 @@
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="/Users/bsiranos/Dropbox/js/underscore-min.js"></script>
+	<script src="/Users/bsiranos/Dropbox/js/jquery-3.1.1.min.js"></script>
+	<script src="/Users/bsiranos/Dropbox/js/math.min.js"></script>
+	<script src="/Users/bsiranos/Dropbox/js/plotly/plotly-latest.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script src="/Users/bsiranos/projects/morpheus.js/js/morpheus-latest.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+	<link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+</head>
+
+<div id="exHist" style="width:600px;height:450px;display: inline-block;"></div>
+<div id="zsHist" style="width:600px;height:450px;display: inline-block;"></div>
+<br>
+
+<select id="select-gene"></select>
+<script>
+	$("#select-gene").select2({
+		placeholder: "Select a state",
+  		allowClear: true
+	});
+</script>
+
+
+<!-- <input type="text" id="pickGene" value="TIAM2" /> -->
+<button onclick="filterEx(document.getElementById('select-gene').value)">Filter by gene symbol</button>
+<p>try: TIAM2, BARX2, PSMG2, LIG1, NIPSNAP3B, REPS1, PBXIP1</p>
+
+
+
+<div id="histExGene" style="width:600px;height:450px;display: inline-block;"></div>
+<div id="histZsGene" style="width:600px;height:450px;display: inline-block;"></div>
+<div id="boxExCohort" style="width:600px;height:450px;display: inline-block;"></div>
+<div id="boxZsCohort" style="width:600px;height:450px;display: inline-block;"></div>
+<table id="geneSets" class="display" width="100%">
+	<thead>
+		<tr>
+			<th>Gene Symbol</th>
+			<th>Gene Desc</th>
+			<th>CNA gain</th>
+			<th>CNA gain deep</th>
+			<th>CNA loss</th>
+			<th>CNA loss deep</th>
+			<th>Mutations</th>
+			<th>Positive Outliers</th>
+			<th>Negative Outliers</th>
+		</tr>
+	</thead>
+</table>
+
+
+<!-- define some things  -->
+<script type="text/javascript">
+	function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index; }
+</script>
+
+<script>
+	var exPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/small_ex_n500x50.gct");
+	var zsPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/small_zs_n500x50.gct");
+	// var geneStatsPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/gene_centric_stats_n7x12276.gct");
+	var exData;
+	var zsData;
+	var geneStatsData;
+	var exConcat = [];
+	var zsConcat = [];
+	
+	var symbolIdVector;
+	var symbolStatsVector;
+	var symbolStatsToIndexMap;
+	var rowIdToIndexMap;
+
+	exPromise.done(function (dataset) {
+		console.log(dataset.getRowCount(), dataset.getColumnCount());
+		for (var i = 0, nrows = dataset.getRowCount(); i < nrows; i++) {
+			for (var j = 0, ncols = dataset.getColumnCount(); j < ncols; j++) {
+				exConcat.push(dataset.getValue(i, j));	
+			}
+		}
+		makeHist(exConcat);
+		exData = dataset;
+
+		symbolIdVector = dataset.getRowMetadata().getByName('pr_gene_symbol');
+		// for (var i = 0, size = symbolIdVector.size(); i < size; i++) {
+		// 	symbolIdVector.getValue(i);
+		// }
+		// asign these to the select options 
+		$("#select-gene").select2({
+			placeholder: "select a gene",
+			allowClear: true, 
+			data: symbolIdVector.array
+		});
+
+		rowIdToIndexMap = morpheus.VectorUtil.createValueToIndexMap(symbolIdVector);
+
+	});
+	zsPromise.done(function (dataset) {
+		console.log(dataset.getRowCount(), dataset.getColumnCount());
+		for (var i = 0, nrows = dataset.getRowCount(); i < nrows; i++) {
+			for (var j = 0, ncols = dataset.getColumnCount(); j < ncols; j++) {
+				zsConcat.push(dataset.getValue(i, j));	
+			}
+		}
+		makeZSHist(zsConcat);
+		zsData = dataset;
+
+	});
+
+	// geneStatsPromise.done(function (dataset) {
+	// 	console.log(dataset.getRowCount(), dataset.getColumnCount());
+	// 	geneStatsData = dataset;
+	// 	symbolStatsVector = dataset.getRowMetadata().getByName('id');
+	// 	symbolStatsToIndexMap = morpheus.VectorUtil.createValueToIndexMap(symbolStatsVector);
+
+	// 	var dtData = 
+	// 	// update the geneSets table
+	// 	$('#geneSets').DataTable({
+	// 		data: dataset.seriesArrays[0],
+	// 		columns: [
+	// 			{ title: 'cna_gain'},
+	// 			{ title: 'cna_gain_deep'},
+	// 			{ title: 'cna_loss'},
+	// 			{ title: 'cna_loss_deep'},
+	// 			{ title: 'mutations'},
+	// 			{ title: 'outliers_positive'},
+	// 			{ title: 'outliers_negative'}
+	// 		]
+	// 	})
+	// })
+
+	var cellIdToItem = new morpheus.Map();
+	// new geneStats dataTable?
+	var items = [];
+	var test = [];
+	var gs = $.ajax(
+		'http://bsiranosian.com/cmap_tcga/gene_centric_stats.txt').done(function (text) {
+			var lines = text.split(/\n/);
+			var header = lines[0].split(/\t/);
+			var nheaders = header.length;
+			for (var j = 0; j < nheaders; j++) {
+				header[j] = header[j].trim();
+			}
+			
+			for (var i = 1; i < lines.length; i++) {
+				if (lines[i] === '') {
+					continue;
+				}
+				var line = lines[i].split(/\t/);
+				var item = [];
+				for (var j = 0; j < nheaders; j++) {
+					item[j] = line[j];
+				}
+				item = item
+				var i1=item.slice(2,4);
+				var i2=i1.concat(item.slice(7,15));
+				items.push(i2);
+				// cellIdToItem.set(item.Id, item);
+			}
+		$('#geneSets').DataTable({
+			data: items
+		})
+		
+		$('#geneSets tbody').on( 'click', 'tr', function () {
+			$(this).toggleClass('selected');
+			console.log(this);
+			test=this;
+			// console.log($(this).);
+			var g = this.cells[0].outerText;
+			console.log(g);
+
+			// var position = table.fnGetPosition(this);
+			// var id = table.fnGetData(position)[0]
+			document.location.href = '?g='+g
+		})
+			// $loading.remove();
+			// itemsLoaded(items);
+
+		}
+	).fail(function () {
+		console.log('unable to load');
+	});
+
+
+	function filterEx(pickGene){
+		console.log(pickGene);
+		console.log(rowIdToIndexMap.get(pickGene));
+		var allCols = new Array(exData.getColumnCount());
+		for (var i = 0; i<allCols.length; i++){
+			allCols[i] = i+1;
+		}
+		var exSlice = new morpheus.SlicedDatasetView(exData, [rowIdToIndexMap.get(pickGene)], allCols);
+		var zsSlice = new morpheus.SlicedDatasetView(zsData, [rowIdToIndexMap.get(pickGene)], allCols);
+		var exGene = [];
+		var zsGene = [];
+		for (var i = 0, nrows = exSlice.getRowCount(); i < nrows; i++) {
+			for (var j = 0, ncols = exSlice.getColumnCount(); j < ncols; j++) {
+				exGene.push(exSlice.dataset.getValue(exSlice.rowIndices[i], exSlice.columnIndices[j]));	
+			}
+		}
+		for (var i = 0, nrows = zsSlice.getRowCount(); i < nrows; i++) {
+			for (var j = 0, ncols = zsSlice.getColumnCount(); j < ncols; j++) {
+				zsGene.push(zsSlice.dataset.getValue(zsSlice.rowIndices[i], zsSlice.columnIndices[j]));	
+			}
+		}
+		makeGeneExHist(exGene, pickGene);
+		makeGeneZsHist(zsGene, pickGene);
+
+		// make the cohort split boxplot
+		var cohorts = exData.getColumnMetadata().getByName('cohort').array;
+		makeCohortExBoxplot(exSlice, cohorts, pickGene)
+		makeCohortZsBoxplot(zsSlice, cohorts, pickGene)
+	}
+
+	function makeHist(values){
+		var data = [
+		{
+			x: values,
+			type: 'histogram',
+			marker: {
+				color: 'orange',
+			},
+		}];
+
+		var layout = {
+			title: 'All expressed genes',
+			xaxis: {title: "log2RSEM GEX"}, 
+			yaxis: {title: "count"}
+		};
+
+		Plotly.newPlot('exHist', data, layout);
+
+
+	}
+	function makeZSHist(values){
+		var data = [
+		{
+			x: values,
+			type: 'histogram',
+			marker: {
+				color: 'Red',
+			},
+		}];
+
+		var layout = {
+			title: 'Z-score',
+			xaxis: {title: "Z-score"}, 
+			yaxis: {title: "count"}
+		};
+
+		Plotly.newPlot('zsHist', data, layout);
+
+
+	}
+	function makeGeneExHist(values, title){
+		var data = [
+		{
+			x: values,
+			type: 'histogram',
+			marker: {
+				color: 'orange',
+			},
+		}];
+
+		var layout = {
+			title: title,
+			xaxis: {title: "log2 RSEM GEX"}, 
+			yaxis: {title: "count"}
+		};
+
+		Plotly.newPlot('histExGene', data, layout);
+
+	}
+	function makeGeneZsHist(values, title){
+		var data = [
+		{
+			x: values,
+			type: 'histogram',
+			marker: {
+				color: 'red',
+			},
+		}];
+
+		var layout = {
+			title: title,
+			xaxis: {title: "Z-score"}, 
+			yaxis: {title: "count"}
+		};
+
+		Plotly.newPlot('histZsGene', data, layout);
+
+	}
+
+	function makeCohortExBoxplot(exSlice, cohorts, gene){
+		var uCohorts = cohorts.filter( onlyUnique );
+		var nCohorts = uCohorts.length;
+		var yData = [];
+		var boxData = [];
+		for (var i = 0; i < nCohorts; i++){
+			yData[i] = [];
+			var thisCohort = uCohorts[i];
+			var idx = cohorts.indexOf(thisCohort);
+			while (idx != -1) {
+				yData[i].push(exSlice.dataset.getValue(exSlice.rowIndices[0], idx));
+				idx = cohorts.indexOf(thisCohort, idx + 1);
+			}
+
+			var result = {
+				type: 'box',
+				y: yData[i], 
+				name: uCohorts[i],
+			}
+			boxData.push(result);
+		}
+
+		layout = {
+			title: 'Distribution of expression values by cohort',
+			yaxis: {title: 'log2 RESM'},
+			xaxis: {title: 'TCGA cohort'}
+		}
+		Plotly.newPlot('boxExCohort', boxData, layout);
+
+	}
+	function makeCohortZsBoxplot(slice, cohorts, gene){
+		var uCohorts = cohorts.filter( onlyUnique );
+		var nCohorts = uCohorts.length;
+		var yData = [];
+		var boxData = [];
+		for (var i = 0; i < nCohorts; i++){
+			yData[i] = [];
+			var thisCohort = uCohorts[i];
+			var idx = cohorts.indexOf(thisCohort);
+			while (idx != -1) {
+				yData[i].push(slice.dataset.getValue(slice.rowIndices[0], idx));
+				idx = cohorts.indexOf(thisCohort, idx + 1);
+			}
+
+			var result = {
+				type: 'box',
+				y: yData[i], 
+				name: uCohorts[i],
+			}
+			boxData.push(result);
+		}
+
+		layout = {
+			title: 'Distribution of Z-score values by cohort',
+			yaxis: {title: 'Z-score'},
+			xaxis: {title: 'TCGA cohort'}
+		}
+		Plotly.newPlot('boxZsCohort', boxData, layout);
+
+	}
+
+
+</script>
+
+
+<!-- 
+https://crossorigin.me/http://bsiranosian.com/cmap_tcga/small_ex_n500x50.gct
+
+var promise = morpheus.DatasetUtil.read('https://s3.amazonaws.com/data.clue.io/morpheus/CCLE_Expression_Entrez_2012-09-29.txt');promise.done(function (dataset) {
+   // dataset is of type morpheus.DatasetInterface
+   console.log(dataset.getRowCount(), dataset.getColumnCount());
+   for (var i = 0, nrows = dataset.getRowCount(); i < nrows; i++) {
+     for (var j = 0, ncols = dataset.getColumnCount(); j < ncols; j++) {
+       dataset.getValue(i, j);
+     }
+   }
+   var symbolIdVector = dataset.getRowMetadata().getByName('id');
+   for (var i = 0, size = symbolIdVector.size(); i < size; i++) {
+     symbolIdVector.getValue(i);
+   }
+ }).fail(function (err) {
+   console.log('error reading ', err);
+ });
+
+new messages
+[1:36]  
+var rowIdToIndexMap = morpheus.VectorUtil.createValueToIndexMap(symbolIdVector);
+   var slice = new morpheus.SlicedDatasetView(dataset, [rowIdToIndexMap.get('foo'),
+     rowIdToIndexMap.get('bar')], [9, 31, 3]); -->

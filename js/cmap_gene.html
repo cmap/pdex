@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.9.0/math.min.js"></script>
+	<script src="https://clue.io/morpheus/js/morpheus-latest.min.js"></script>
+	<script src="https://clue.io/morpheus/js/morpheus-external-latest.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<link href="https://clue.io/morpheus/css/morpheus-latest.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+		<!-- bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://clue.io/public/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700|Roboto+Condensed:400,300,700|Roboto+Slab:100,300,400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet" type="text/css">
+	<link href="https://clue.io/public/css/dist/clue.all.min.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/dist/clue.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/lib/gridstack.min.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/lib/gridstack-extra.css" rel="stylesheet">
+	<link href="https://clue.io/public/css/local/command.css" rel="stylesheet">
+	<link href="https://clue.io/public/scss/local/elements/_typography.scss" rel="stylesheet">
+
+	<script>
+	$( function() {
+		$( document ).tooltip();
+	} );
+	</script>
+	<style>
+	label {
+		display: inline-block;
+		width: 5em;
+	}
+	</style>
+</head>
+<body>
+<header>
+	<div style="margin:0" class="row">
+		<div id="header-bar" style="padding-left:0;padding-right:0;" class="col-xs-12 header-dark">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<!--Used in app header-->
+				<div id="main-header-bar" style="display: flex;" class="flex">
+					<a href="/"><img src="https://clue.io/public/img/logos/banner-logo.svg" style="padding-right:5px;"></a>
+					<span id="header-app-location" style="" class="clue_app hidden-xs">
+						<span id="header-clue-app" style="">CLUE APP&nbsp;</span>
+						<span id="header-app-title" style="cursor: pointer;" class="app_name" data-app-title="PDEx">PDEx</span>
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="container-fluid">
+	<div class="col-md-1"> </div>
+	<div class="col-md-10"> 
+	<div class='row'>
+	<div class="col-md-8">
+		<h3>Association between sample sets and CMap perturbagens</h3>
+		<p>PDEx scores: A precentile measure of the strength of association between sample set and CMap perturbagen compared to an empircal background. Range is -100 to 100. Scores > |90| beat out 90% of background connections and are considered strong. <a href="faq.html" target="_blank"> (FAQ)</a></p> 
+	</div>
+	<hr>
+	<div class='row'>
+		<div class="col-md-6"  id="psHeatmap" style="height:900px;"></div>		
+		<div class="col-md-6">
+			<div class='row' id=setInfoTitle><h4>select a sample set to see info here</h4> </div>
+			<div class='row'>
+				<div class="col-md-6">
+					<p>Highest overlap fraction: |a n b| / min(|a|,|b|) </p>
+					<table  id="overlapTable" class="display">
+					<thead>
+						<th>Sample set</th>		
+						<th>Overlap fraction</th>		
+					</thead> 
+					</table>
+				</div>
+				<div class="col-md-6">
+					<p>Highest jaccard index: |a n b| / |a u b|</p>
+					<table  id="jaccardTable" class="display">
+					<thead>
+						<th>Sample set</th>		
+						<th>Jaccard index</th>		
+					</thead> 
+					</table>
+				</div>
+			</div>
+			<br>
+			<div class='row'>
+				<div class="col-md-6">
+					<p>Highest correlated results: spearman cor of PDEx scores in summly.</p>
+					<table  id="corTable" class="display">
+					<thead>
+						<th>Sample set</th>		
+						<th>Spearman cor</th>		
+					</thead> 
+					</table>
+				</div>
+				<div class="col-md-6">
+					<p>Correlated, nonoverlapping sets</p>
+					<table  id="corNoOverlapTable" class="display">
+					<thead>
+						<th>Sample set</th>		
+						<th>Saled correlation</th>		
+					</thead> 
+					</table>
+				</div>
+			</div>	
+			<div class='row'>
+				<div id="cohortBarchart" style="height:450px;"></div>
+			</div>
+			<a id="downloadSetMembers">Download set members</a>
+		</div>
+	</div>
+	</div>
+
+	<!-- <button id='hideHist'>Toggle display of expression and z-score distributions</button> -->
+	<hr>
+	<div class='row'><h3>Expression and z-score distributions of selected gene</h3></div>
+	<div class='row'>	
+		<div class="col-md-6" id="histExGene" style="height:450px;"></div>
+		<div  class="col-md-6" id="histZsGene" style="height:450px;"></div>
+	</div>
+	<div class='row'>	
+		<div  class="col-md-6" id="boxExCohort" style="height:450px;"></div>
+		<div class="col-md-6" id="boxZsCohort" style="height:450px;"></div>
+	</div>
+</div>
+</body>
+
+<!-- define some things  -->
+<script type="text/javascript">
+	function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index; }
+
+    function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
+	// fiinix on stackoverflow
+	function getQueryParams(qs) {
+	    qs = qs.split("+").join(" ");
+
+	    var params = [], tokens,
+	    re = /[?&]?([^=]+)=([^&]*)/g;
+
+	    while (tokens = re.exec(qs)) {
+	        params.push({k:decodeURIComponent(tokens[1]),v:decodeURIComponent(tokens[2])});
+	    }
+
+	    return params;
+	}
+</script>
+
+
+<script>
+	// var exPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/small_ex_n500x434.gct");
+	// var zsPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/small_zs_n500x434.gct");
+	// var psPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/ps_sum_pcl_n13302x84.gct");
+	// var psPromise = morpheus.DatasetUtil.read("http://bsiranosian.com/cmap_tcga/ps_sum_pcl_n2274x84.gct");
+	// var pickGene = getParameterByName('g');
+	var params = getQueryParams(document.location.search);
+	var pickGenes = [];
+	// get list of pickGenes in the url
+	for (i = 0; i < params.length; i++) {
+		if (params[i].k === 'g'){
+			pickGenes.push(params[i].v);
+		}
+	}
+	// send back to overview if no query string 
+	if (pickGenes.length==0){
+		window.location = "overview.html";
+	} else {
+		filterEx(pickGenes);
+	}
+
+	// if(pickGene){
+	// 	filterEx(pickGene);
+	// } else {
+	// 	window.location = "overview.html";
+	// }
+
+	var symbolIdVector;
+	var symbolStatsVector;
+	var symbolStatsToIndexMap;
+	var rowIdToIndexMap;
+	var psSymbolIdVector;
+	var psColIdtoIndexMap;
+	
+	function makeGeneExHist(values, title){
+		var data = [
+		{
+			x: values,
+			type: 'histogram',
+			marker: {
+				color: 'orange',
+			},
+		}];
+
+		var layout = {
+			title: title + "<br>10255 TCGA samples",
+			xaxis: {title: "log2 RSEM GEX"}, 
+			yaxis: {title: "count"},
+			autosize: true
+		};
+
+		Plotly.newPlot('histExGene', data, layout);
+
+	}
+	function makeGeneZsHist(values, title){
+		var posThresh = 4;
+		var negThresh = -4;
+
+		var valNeg = values.filter(function(v){return v <= negThresh;})
+		var valPos = values.filter(function(v){return v >= posThresh;})
+		var valNorm = values.filter(function(v){return (v > negThresh & v < posThresh);})
+		var maxVal = Math.max.apply(null, values);
+		var minVal = Math.min.apply(null, values);
+		var sBin = (maxVal - minVal) /50;
+		var traceNormal = {
+			x: valNorm,
+			name: "Normal samples",
+			type: 'histogram',
+			marker: {color: 'grey'},
+			xbins: {start: minVal, end: maxVal, size: sBin }
+		};
+		var traceNeg = {
+			x: valNeg,
+			name: 'negative outliers',
+			type: 'histogram',
+			marker: {color: 'red'},
+			xbins: {start: minVal, end: maxVal, size: sBin }
+		};
+		var tracePos = {
+			x: valPos,
+			name: 'positive outliers',
+			type: 'histogram',
+			marker: {color: 'firebrick'},
+			xbins: {start: minVal, end: maxVal, size: sBin }
+		};
+
+		var layout = {
+			title: title  + "<br>10255 TCGA samples",
+			xaxis: {title: "Z-score"}, 
+			yaxis: {title: "count"},
+			barmode: "overlay",
+			autosize: true
+		};
+		var data = [traceNormal, traceNeg, tracePos];
+		Plotly.newPlot('histZsGene', data, layout);
+
+	}
+
+	function makeCohortExBoxplot(exSlice, cohorts){
+		var uCohorts = cohorts.filter( onlyUnique );
+		var nCohorts = uCohorts.length;
+		var yData = [];
+		var boxData = [];
+		for (var i = 0; i < nCohorts; i++){
+			yData[i] = [];
+			var thisCohort = uCohorts[i];
+			var idx = cohorts.indexOf(thisCohort);
+			while (idx != -1) {
+				yData[i].push(exSlice.getValue(0, idx));
+				idx = cohorts.indexOf(thisCohort, idx + 1);
+			}
+
+			var result = {
+				type: 'box',
+				y: yData[i], 
+				name: uCohorts[i],
+			}
+			boxData.push(result);
+		}
+
+		layout = {
+			title: 'Distribution of expression values by cohort',
+			yaxis: {title: 'log2 RESM'},
+			xaxis: {title: 'TCGA cohort'},
+			autosize: true
+		}
+		Plotly.newPlot('boxExCohort', boxData, layout);
+
+	}
+	function makeCohortZsBoxplot(slice, cohorts){
+		var uCohorts = cohorts.filter( onlyUnique );
+		var nCohorts = uCohorts.length;
+		var yData = [];
+		var boxData = [];
+		for (var i = 0; i < nCohorts; i++){
+			yData[i] = [];
+			var thisCohort = uCohorts[i];
+			var idx = cohorts.indexOf(thisCohort);
+			while (idx != -1) {
+				yData[i].push(slice.getValue(0, idx));
+				idx = cohorts.indexOf(thisCohort, idx + 1);
+			}
+
+			var result = {
+				type: 'box',
+				y: yData[i], 
+				name: uCohorts[i],
+			}
+			boxData.push(result);
+		}
+
+		layout = {
+			title: 'Distribution of Z-score values by cohort',
+			yaxis: {title: 'Z-score'},
+			xaxis: {title: 'TCGA cohort'},
+			autosize: true
+		}
+		Plotly.newPlot('boxZsCohort', boxData, layout);
+
+	}
+
+	function filterEx(pickGenes){
+		console.log(pickGenes);
+		if (pickGenes.length==1){
+
+		}
+		var exurl = encodeURI('https://dev-api.clue.io/data-api/slice/?name=TCGA_RNASEQ.RSEM_PROFILE.L1KAIG_TXONLY&rquery=pr_gene_symbol:(' + pickGenes.join(' ') + ')')
+		var zsurl = encodeURI('https://dev-api.clue.io/data-api/slice/?name=TCGA_RNASEQ.RSEM_ZSCLUSTER.L1KAIG_TXONLY&rquery=pr_gene_symbol:(' + pickGenes.join(' ') + ')')
+		var psurl = encodeURI('https://dev-api.clue.io/data-api/slice/?name=PDEX-scores&cquery=gene:(' + pickGenes.join(' ') + ')')
+		console.log(psurl);
+		var exPromise = morpheus.DatasetUtil.read(exurl);
+		var zsPromise = morpheus.DatasetUtil.read(zsurl);
+		var psPromise = morpheus.DatasetUtil.read(psurl);
+
+		var promises = []; 
+		promises.push(exPromise); 
+		promises.push(zsPromise);
+		promises.push(psPromise);
+		$.when.apply($, promises).done(function (ds1, ds2, ds3) {
+			var exGene = [];
+			var zsGene = [];
+			for (var i = 0, nrows = ds1.getRowCount(); i < nrows; i++) {
+				for (var j = 0, ncols = ds1.getColumnCount(); j < ncols; j++) {
+					exGene.push(ds1.getValue(i, j));	
+				}
+			}
+			for (var i = 0, nrows = ds2.getRowCount(); i < nrows; i++) {
+				for (var j = 0, ncols = ds2.getColumnCount(); j < ncols; j++) {
+					zsGene.push(ds2.getValue(i,j));	
+				}
+			}
+			makeGeneExHist(exGene, pickGenes.join(', '));
+			makeGeneZsHist(zsGene, pickGenes.join(', '));
+
+			// make the cohort split boxplot
+			var cohorts = ds1.getColumnMetadata().getByName('cohort').array;
+			makeCohortExBoxplot(ds1, cohorts);
+			makeCohortZsBoxplot(ds2, cohorts);
+
+			var mheat = new morpheus.HeatMap({
+			dataset:ds3, 
+			el:$('#psHeatmap'), 
+			height:800, 
+			colorScheme:morpheus.HeatMapColorScheme.Predefined.SUMMLY2(),
+			columns: [{field: 'gene', display: 'text', order: 3},
+					  {field: 'set', display: 'text', order: 2},
+					  {field: 'set_size', display: 'text', order:1}], 
+			rowSortBy:[{"isColumns":false,"order":1,"type":"byValues","modelIndices":[0]}]
+
+			});
+			// at first select the first col 
+			var selectedNames = [];
+			var currentDataset = mheat.getProject().getSortedFilteredDataset();
+			selectedNames.push(currentDataset.getColumnMetadata().getByName('gene').getValue(0) + '_' + currentDataset.getColumnMetadata().getByName('set').getValue(0));
+			getSetsInfo(selectedNames);
+
+			// updates when a new col is selected
+			mheat.getProject().getColumnSelectionModel().on("selectionChanged", function(e){
+				
+				var selectedIndices = mheat.getProject().getColumnSelectionModel().getViewIndices();
+				if(selectedIndices.size()>0){}
+
+				var currentDataset = mheat.getProject().getSortedFilteredDataset();
+				var setVector = currentDataset.getColumnMetadata().getByName('set');
+				var geneVector = currentDataset.getColumnMetadata().getByName('gene');
+				var selectedNames = [];
+				selectedIndices.forEach(function (index) {
+					selectedNames.push(geneVector.getValue(index) + '_' + setVector.getValue(index));
+					// console.log(setVector.getValue(index));
+					// console.log(geneVector.getValue(index));
+				});
+				console.log(selectedNames);
+				// Now go and get the relevant info for those selected sets
+				getSetsInfo(selectedNames);
+			})
+
+		// } else {
+		// 	$("#histExGene").html('<h2>Gene expresison of ' + pickGene + ' not measured in TCGA </h2>');
+		// 	$("#histExGene").attr("style", "width:800px;text-align:center");
+		// 	$("#histZsGene").hide();
+		// 	$("#boxExCohort").hide();
+		// 	$("#boxZsCohort").hide();
+		// 	$("#hideHist").hide();
+		// }
+
+		})
+	};
+
+	function getSetsInfo(selectedNames){
+		$("#setInfoTitle").html('<h4>Selected sets: ' + selectedNames.join(',  ') + '</h4>')
+		if (selectedNames.length >1){
+			alert('Cant do that yet!')
+		} else {
+			// load up relative information from that arf
+			var thisName = selectedNames[0]; 
+			var overlapFile = 'http://bsiranosian.com/cmap_tcga/arfs/' + thisName + '/top_overlap.txt'
+			var jaccardFile = 'http://bsiranosian.com/cmap_tcga/arfs/' + thisName + '/top_jaccard.txt'
+			var corFile = 'http://bsiranosian.com/cmap_tcga/arfs/' + thisName + '/top_cor.txt'
+			var corNoOverlapFile = 'http://bsiranosian.com/cmap_tcga/arfs/' + thisName + '/top_cor_scaled.txt'
+			var cohortFile = 'http://bsiranosian.com/cmap_tcga/arfs/' + thisName + '/member_cohorts.txt'
+			var setMemberFile = 'http://bsiranosian.com/cmap_tcga/arfs/' + thisName + '/set_members.txt'
+			
+			var overlap = [];
+			var trash = $.ajax(overlapFile).done(function (text) {
+				var lines = text.split(/\n/);
+				var header = lines[0].split(/\t/);
+				var nheaders = header.length;
+				for (var j = 0; j < nheaders; j++) {
+					header[j] = header[j].trim();
+				}
+				
+				for (var i = 1; i < lines.length; i++) {
+					if (lines[i] === '') {
+						continue;
+					}
+					var line = lines[i].split(/\t/);
+					var item = [];
+					for (var j = 0; j < nheaders; j++) {
+						item[j] = line[j];
+					}
+					overlap.push(item);
+				}
+				if ($.fn.dataTable.isDataTable('#overlapTable')){
+					$('#overlapTable').dataTable().fnClearTable();
+					$('#overlapTable').dataTable().fnAddData(overlap);
+				} else {
+					$('#overlapTable').DataTable({
+						retrieve: true,
+						data: overlap,
+						scrollY: "100px",
+						paging: false, 
+						searching: false,
+						ordering: false, 
+						columnDefs: [
+						{"name": "Sample set"}, 
+						{"name": "Overlap fraction"}]
+					});
+					$('#overlapTable').show()
+				}
+			});
+
+			var jaccard = [];
+			var trash = $.ajax(jaccardFile).done(function (text) {
+				var lines = text.split(/\n/);
+				var header = lines[0].split(/\t/);
+				var nheaders = header.length;
+				for (var j = 0; j < nheaders; j++) {
+					header[j] = header[j].trim();
+				}
+				
+				for (var i = 1; i < lines.length; i++) {
+					if (lines[i] === '') {
+						continue;
+					}
+					var line = lines[i].split(/\t/);
+					var item = [];
+					for (var j = 0; j < nheaders; j++) {
+						item[j] = line[j];
+					}
+					jaccard.push(item);
+				}
+				if ($.fn.dataTable.isDataTable('#jaccardTable')){
+					$('#jaccardTable').dataTable().fnClearTable();
+					$('#jaccardTable').dataTable().fnAddData(jaccard);
+				} else {
+					$('#jaccardTable').DataTable({
+						retrieve: true,
+						data: jaccard,
+						scrollY: "100px",
+						paging: false, 
+						searching: false,
+						ordering: false, 
+						columnDefs: [
+						{"name": "Sample set"}, 
+						{"name": "Jaccard index"}]
+					});
+					$('#jaccardTable').show()
+				}
+			});
+
+			var cor = [];
+			var trash = $.ajax(corFile).done(function (text) {
+				var lines = text.split(/\n/);
+				var header = lines[0].split(/\t/);
+				var nheaders = header.length;
+				for (var j = 0; j < nheaders; j++) {
+					header[j] = header[j].trim();
+				}
+				
+				for (var i = 1; i < lines.length; i++) {
+					if (lines[i] === '') {
+						continue;
+					}
+					var line = lines[i].split(/\t/);
+					var item = [];
+					for (var j = 0; j < nheaders; j++) {
+						item[j] = line[j];
+					}
+					cor.push(item);
+				}
+				if ($.fn.dataTable.isDataTable('#corTable')){
+					$('#corTable').dataTable().fnClearTable();
+					$('#corTable').dataTable().fnAddData(cor);
+				} else {
+					$('#corTable').DataTable({
+						retrieve: true,
+						data: cor,
+						scrollY: "100px",
+						paging: false, 
+						searching: false,
+						ordering: false, 
+						columnDefs: [
+						{"name": "Sample set"}, 
+						{"name": "Spearman correlation"}]
+					});
+					$('#corTable').show()
+				}
+			});
+
+			var corNoOverlap = [];
+			var trash = $.ajax(corNoOverlapFile).done(function (text) {
+				var lines = text.split(/\n/);
+				var header = lines[0].split(/\t/);
+				var nheaders = header.length;
+				for (var j = 0; j < nheaders; j++) {
+					header[j] = header[j].trim();
+				}
+				
+				for (var i = 1; i < lines.length; i++) {
+					if (lines[i] === '') {
+						continue;
+					}
+					var line = lines[i].split(/\t/);
+					var item = [];
+					for (var j = 0; j < nheaders; j++) {
+						item[j] = line[j];
+					}
+					corNoOverlap.push(item);
+				}
+				if ($.fn.dataTable.isDataTable('#corNoOverlapTable')){
+					$('#corNoOverlapTable').dataTable().fnClearTable();
+					$('#corNoOverlapTable').dataTable().fnAddData(corNoOverlap);
+				} else {
+					$('#corNoOverlapTable').DataTable({
+						retrieve: true,
+						data: corNoOverlap,
+						scrollY: "100px",
+						paging: false, 
+						searching: false,
+						ordering: false, 
+						columnDefs: [
+						{"name": "Sample set"}, 
+						{"name": "Spearman cor - overlap"}]
+					});
+					$('#corNoOverlapTable').show()
+				}
+			});
+
+			var cohortNames = [];
+			var cohortCount = [];
+			var trash = $.ajax(cohortFile).done(function (text) {
+				var lines = text.split(/\n/);
+				var header = lines[0].split(/\t/);
+				var nheaders = header.length;
+				for (var j = 0; j < nheaders; j++) {
+					header[j] = header[j].trim();
+				}
+				
+				for (var i = 1; i < lines.length; i++) {
+					if (lines[i] === '') {
+						continue;
+					}
+					var line = lines[i].split(/\t/);
+					var item = [];
+					for (var j = 0; j < nheaders; j++) {
+						item[j] = line[j];
+					}
+					cohortNames.push(item[0]);
+					cohortCount.push(item[1]);
+				}
+				console.log(cohortNames);
+				console.log(cohortCount);
+
+				// make the plot
+				var data = [
+				{
+					y: cohortNames,
+					x: cohortCount,
+					type: 'bar',
+					orientation: 'h'
+				}];
+				var layout = {
+					title: 'Set membership',
+					yaxis: {title: 'TCGA cohort'},
+					xaxis: {title: 'Members',
+							tickangle: -90},
+					autosize: true
+				};
+				Plotly.newPlot('cohortBarchart', data, layout);
+			});
+
+			$("#downloadSetMembers").attr({target: '_blank', 
+										   href: setMemberFile})
+		}
+
+	};
+
+
+
+	$("#hideHist").click(function(){
+		console.log('BUTTON')
+		$("#histExGene").toggle(500);
+		$("#histZsGene").toggle(500);
+		$("#boxExCohort").toggle(500);
+		$("#boxZsCohort").toggle(500);
+
+		$("#histZsGene").css("display", "inline-block");
+		$("#boxExCohort").css("display", "inline-block");
+		$("#boxZsCohort").css("display", "inline-block");
+		$("#histExGene").css("display", "inline-block");
+
+
+
+	});
+
+	// $(document).ready(function() {
+	// })
+</script>
+</html>	
+
